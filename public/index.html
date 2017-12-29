@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/custom.css">
+        <!-- JQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <!-- <body onload="updateClock(); setInterval('updateClock()', 1000 )"> -->
+    <body>
+        <script>
+            $(document).ready(function () {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                });
+            });
+        </script>
+        <div class=wrapper>
+            <nav id="sidebar">
+
+
+                <!-- Sidebar Header -->
+                <div class="sidebar-header">
+                    <h1>Test</h1>
+                </div>
+
+
+                <!-- Sidebar Links -->
+                <ul class="list-unstyled components">
+                    <li class="active"><a href="#">equities</a></li>
+                    <li><a href="#">CPCV</a></li>
+
+                    <!-- Links iwth dropdown items -->
+                    <li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">bgls</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href"#">bgls_01</a></li>
+                            <li><a href"#">bgls_02</a></li>
+                            <li><a href"#">bgls_03</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">gas</a></li>
+                    <li><a href="#">treasuries</a></li>
+                </ul>
+
+
+            </nav>
+            <div id="content">
+                <nav class="navbar navbar-inverse navbar-static-top">
+                    <div class="container">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <button id="sidebarCollapse" class="btn navbar-btn" type="button" href="#">
+                                    <i class="glyphicon glyphicon-menu-hamburger"></i>
+                                </button>
+                            </li>
+                            <li class="active"><a href="#">Home</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </body>
+</html>
