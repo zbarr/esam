@@ -18,7 +18,7 @@ NavBar
 
 
 .navbar-inverse {
-    background: #3b3b3b;
+    background: #000000;
     border: 0;
 }
 
@@ -30,7 +30,9 @@ NavBar
     padding-left: 0px;
 }
 
-
+#navlinks a:hover {
+    color: #a2232f;
+}
 
 /* ------------------------------
 All CSS for Sidebar
@@ -64,6 +66,7 @@ All CSS for Sidebar
     text-align: center;
     padding-top: 4px;
     padding-bottom: 4px;
+    background: #000000
 }
 
 
