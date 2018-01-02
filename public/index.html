@@ -12,31 +12,22 @@
         <!-- Bootstrap Js CDN -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
-    <!-- <body onload="updateClock(); setInterval('updateClock()', 1000 )"> -->
+
+
+
     <body>
-        <script>
-            $(document).ready(function () {
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar').toggleClass('active');
-                });
-            });
-        </script>
         <div class=wrapper>
+
+
             <nav id="sidebar">
 
+                <div class="sidebar-header">Desks</div>
 
-                <!-- Sidebar Header -->
-                <div class="sidebar-header">
-                    <h1>Test</h1>
-                </div>
-
-
-                <!-- Sidebar Links -->
                 <ul class="list-unstyled components">
-                    <li class="active"><a href="#">equities</a></li>
+                    <li><a href="#">equities</a></li>
                     <li><a href="#">CPCV</a></li>
 
-                    <!-- Links iwth dropdown items -->
+
                     <li>
                         <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">bgls</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -48,23 +39,58 @@
                     <li><a href="#">gas</a></li>
                     <li><a href="#">treasuries</a></li>
                 </ul>
-
-
             </nav>
+
+
+
             <div id="content">
                 <nav class="navbar navbar-inverse navbar-static-top">
-                    <div class="container">
+                    <div id="navlinks" class="container-fluid">
                         <ul class="nav navbar-nav">
-                            <li>
-                                <button id="sidebarCollapse" class="btn navbar-btn" type="button" href="#">
-                                    <i class="glyphicon glyphicon-menu-hamburger"></i>
-                                </button>
+                            <li id="sidebarCollapse">
+                                <a href="#"><span class="glyphicon glyphicon-menu-hamburger"></a>
                             </li>
-                            <li class="active"><a href="#">Home</a></li>
+                            <li id="home" class="active">
+                                <a href="#">Home</a>
+                            </li>
+                            <li id="sapphires">
+                                <a href="#">Sapphires</a>
+                            </li>
+                            <li id = "ssvcs">
+                                <a href="#">Shared Services</a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li id="settings">
+                                <a href="#">Settings</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
+                <div id="page">
+
+                    <h2>Sample</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <div class="line"></div>
+
+                    <h2>Lorem Ipsum Dolor</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <div class="line"></div>
+
+                    <h2>Lorem Ipsum Dolor</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    <div class="line"></div>
+
+                    <h3>Lorem Ipsum Dolor</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+
             </div>
         </div>
+        <script type="text/javascript" src="frontend.js"></script>
     </body>
 </html>
