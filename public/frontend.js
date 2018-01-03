@@ -1,4 +1,8 @@
-
+var errors = ['ch6pslt068.concord.global:: 2018-01-03,05:30:20.381303999 [ERROR] controller(54308) ccs2/PositionProxy.cpp:604 | INVALID POD SNAP: DPSIEE: 2|6|6|5000222560|26|2: [GrossPosition(100|200000000),IntradayPosition(100|200000000)]: strategy 6 no longer belongs to portfolio 6',
+'ch6pslt068.concord.global:: 2018-01-03,05:30:20.381249644 [ERROR] controller(54308) ccs2/PositionProxy.cpp:604 | INVALID POD SNAP: DPSIEE: 2|39|145|5000091372|2|25: [GrossPosition(104|0),IntradayPosition(0|0)]: strategy 145 no longer belongs to portfolio 39',
+'ch6psltr099.concord.global:: 2018-01-03,05:17:33.277005003 [ERROR] treasuries(7110) treas_strat/Scalper.h:93 | ZCN8 Emergency Wide 3',
+'ch6psltr070.concord.global:: 2018-01-03,04:55:45.106732612 [ERROR] treasuries(9206) treas_strat/Scalper.h:93 | ZFH8 Emergency Wide 3',
+'ch6psltr055.concord.global:: 2018-01-03,03:57:04.948013801 [ERROR] treasuries(67413) treas_strat/Scalper.h:95 | Emergency Wide 2']
 
 
 var desks = {equities: {engines: ['es_stacker_01', 'equities_01', 'equities_02', 'equities_03', 'equities_04', 'equities_05', 'equities_06', 'equities_07']},
@@ -34,16 +38,79 @@ if (document.getElementById("sapphires").classList.contains("active")) {
     }
     console.log("here")
 }
+
+/** Sidebar **/
+//document.getElementById("sidebar-items").innerHTML=""
+for (desk in desks) {
+
+    var li = document.createElement("li")
+    document.getElementById("sidebar-items").appendChild(li)
+
+    var div = document.createElement("div")
+    div.className = "container-fluid"
+    li.appendChild(div)
+
+    var ul = document.createElement("ul")
+    ul.id = "sidebar-section"
+    ul.className = "nav navbar-nav"
+    div.appendChild(ul)
+
+    var li = document.createElement("li")
+    ul.appendChild(li)
+
+    var a = document.createElement("a")
+    a.id = "desk"
+    a.href = "#"
+    a.innerHTML = desk
+    li.appendChild(a)
+
+    var ul = document.createElement("ul")
+    ul.className = "collapse list-unstyled"
+    ul.id = desk
+    li.appendChild(ul)
+
+    for (var i = 0; i < desks[desk].engines.length; i++) {
+        var li = document.createElement("li")
+        ul.appendChild(li)
+        var a = document.createElement("a")
+        a.href="#"
+        a.id = "engine"
+        a.innerHTML = desks[desk].engines[i]
+        li.appendChild(a)
+    }
+
+
+    //Arrow stuff
+    var ul = document.createElement("ul")
+    ul.id = "arrow"
+    ul.className = "nav navbar-nav navbar-right"
+    div.appendChild(ul)
+
+    var li = document.createElement("li")
+    li.innerHTML = '<a href="#' + desk + '" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-menu-down"></i><i class="glyphicon glyphicon-menu-up"></i>'
+    ul.appendChild(li)
+    //End arrow stuff
+}
+
+
+
+
+/** Hamburger button **/
 document.getElementById("sidebarCollapse").onclick = function(event) {
     $('#sidebar').toggleClass('active');
     console.log("toggling")
 }
 
+
+/** Home Button **/
 document.getElementById("home").onclick = function (event) {
     resetActive()
     document.getElementById("home").classList.add("active")
+    document.getElementById("grid").innerHTML = ""
 }
 
+
+/** Sapphires Button **/
 document.getElementById("sapphires").onclick = function(event) {
     resetActive()
     document.getElementById("sapphires").classList.add("active")
@@ -51,31 +118,62 @@ document.getElementById("sapphires").onclick = function(event) {
 
     for (var i = 0; i < sapphires.length; i++) {
         var div1 = document.createElement("div");
-        div1.className="col-md-4";
+        div1.className="col-md-3";
         document.getElementById("grid").appendChild(div1)
         var div2 = document.createElement("div");
-        div2.className="panel";
+        div2.className="panel panel-success";
         div1.appendChild(div2);
         var div3 = document.createElement("div");
         div3.className="panel-heading";
+
+        // Header
+        div3.innerHTML = sapphires[i] + " - ch6psltr079"
+        // End header
+
         div2.appendChild(div3);
+
         var div4 = document.createElement("div");
         div4.className="panel-body";
-        div4.innerHTML = sapphires[i]
-        div3.appendChild(div4);
+        div2.appendChild(div4);
+
+        var div = document.createElement("div");
+        div.className="container-fluid"
+        div4.appendChild(div)
+
+        var btn = document.createElement("button");
+        btn.className = "btn btn-success";
+        btn.type="button"
+        btn.innerHTML = "Start"
+        div.appendChild(btn)
+
+        var btn = document.createElement("button");
+        btn.className = "btn btn-danger";
+        btn.type="button"
+        btn.innerHTML = "Stop"
+        div.appendChild(btn)
+
+        var btn = document.createElement("button");
+        btn.className = "btn btn-basic";
+        btn.type="button"
+        btn.innerHTML = "Logs"
+        div.appendChild(btn)
     }
 }
 
+
+/** Shared Services Button **/
 document.getElementById("ssvcs").onclick = function(event) {
     resetActive()
     document.getElementById("ssvcs").classList.add("active")
     document.getElementById("grid").innerHTML = ""
-    $("#grid").innerHTML = ""
 }
 
+
+/** Settings Button **/
 document.getElementById("settings").onclick = function() {
     resetActive()
     document.getElementById("settings").classList.add("active")
+    document.getElementById("grid").innerHTML = ""
 }
 
 
@@ -83,23 +181,3 @@ document.getElementById("settings").onclick = function() {
 function resetActive() {
     $('#navlinks li').removeClass('active');
 }
-
-
-var sample = <h2>Sample</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<div class="line"></div>
-
-<h2>Lorem Ipsum Dolor</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<div class="line"></div>
-
-<h2>Lorem Ipsum Dolor</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-<div class="line"></div>
-
-<h3>Lorem Ipsum Dolor</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>

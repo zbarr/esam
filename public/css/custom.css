@@ -22,7 +22,7 @@ NavBar
     border: 0;
 }
 
-.glyphicon {
+.glyphicon-menu-hamburger {
     font-size: 20px;
 }
 
@@ -33,6 +33,7 @@ NavBar
 #navlinks a:hover {
     color: #a2232f;
 }
+
 
 /* ------------------------------
 All CSS for Sidebar
@@ -46,16 +47,12 @@ All CSS for Sidebar
     transition: all 0.3s;
 }
 
-#sidebar ul li a {
-    padding: 10px;
+#sidebar a {
+    /* padding: 10px; */
     font-size: 1.1em;
     display: block;
 }
 
-#sidebar ul li a:hover {
-    color: #fff;
-    background: #a2232f;
-}
 
 #sidebar.active {
     margin-left: -250px;
@@ -69,28 +66,51 @@ All CSS for Sidebar
     background: #000000
 }
 
-
-
-/* ------------------------------
-You need to understand what all of this does
------------------------------- */
-
-
-a[data-toggle="collapse"] {
-    position: relative;
+#desk {
+    min-width: 210px;
+    padding: 10px;
 }
 
-a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
-    content: '\e259';
+#desk:hover {
+    color: #fff;
+    background: #a2232f;
+}
+
+#desk:focus {
+    background: #a2232f;
+}
+
+#engine {
     display: block;
-    position: absolute;
-    right: 20px;
-    font-family: 'Glyphicons Halflings';
-    font-size: 0.6em;
+    padding: 10px;
+    padding-left: 30px;
 }
 
-a[aria-expanded="true"]::before {
-    content: '\e260';
+#engine:hover {
+    color: #fff;
+    background: #a2232f;
+}
+
+#arrow a {
+    padding: 10px;
+}
+
+#arrow a:focus {
+    background: none;
+}
+
+#arrow a:hover {
+    background: #000000;
+}
+
+.glyphicon-menu-down {
+    font-size: 15px;
+    padding: 2.5px;
+}
+
+.glyphicon-menu-up {
+    font-size: 15px;
+    padding: 2.5px;
 }
 
 a, a:hover, a:focus {
@@ -99,16 +119,25 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
-
-/*
-
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
+a[aria-expanded=true] .glyphicon-menu-down {
+   display: none;
 }
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
+
+a[aria-expanded=false] .glyphicon-menu-up {
+   display: none;
 }
-*/
+
+/* ------------------------------
+All CSS for Grid
+------------------------------ */
+.panel {
+    border-radius: 0;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.panel-heading {
+    background-color: #a2232f;
+}
