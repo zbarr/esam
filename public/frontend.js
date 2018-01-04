@@ -1,3 +1,7 @@
+//wsclient.run()
+
+
+
 var errors = ['ch6pslt068.concord.global:: 2018-01-03,05:30:20.381303999 [ERROR] controller(54308) ccs2/PositionProxy.cpp:604 | INVALID POD SNAP: DPSIEE: 2|6|6|5000222560|26|2: [GrossPosition(100|200000000),IntradayPosition(100|200000000)]: strategy 6 no longer belongs to portfolio 6',
 'ch6pslt068.concord.global:: 2018-01-03,05:30:20.381249644 [ERROR] controller(54308) ccs2/PositionProxy.cpp:604 | INVALID POD SNAP: DPSIEE: 2|39|145|5000091372|2|25: [GrossPosition(104|0),IntradayPosition(0|0)]: strategy 145 no longer belongs to portfolio 39',
 'ch6psltr099.concord.global:: 2018-01-03,05:17:33.277005003 [ERROR] treasuries(7110) treas_strat/Scalper.h:93 | ZCN8 Emergency Wide 3',
@@ -9,7 +13,8 @@ var desks = {equities: {engines: ['es_stacker_01', 'equities_01', 'equities_02',
             cpcv: {engines: ['vmm_01', 'vmm_02', 'vmm_03']},
             bgls: {engines: ['bgls_01', 'bgls_02', 'bgls_03']},
             gas: {engines: ['gas_01', 'gas_02', 'gas_03']},
-            treasuries: {engines: ['treasuries_01', 'treasuries_02']}}
+            treasuries: {engines: ['treasuries_01', 'treasuries_02']},
+            ssvcs: {engines: ['pricefeeder-basic_glbx_01', 'pricefeeder-basic_zbbf_01', 'drop-ccs2-lime-1', 'ccs2-webadmin']}}
 
 var sharedServices = {drop: []}
 
@@ -38,6 +43,9 @@ if (document.getElementById("sapphires").classList.contains("active")) {
     }
     console.log("here")
 }
+
+getActiveHeartbeats()
+
 
 /** Sidebar **/
 //document.getElementById("sidebar-items").innerHTML=""
@@ -106,7 +114,7 @@ document.getElementById("sidebarCollapse").onclick = function(event) {
 document.getElementById("home").onclick = function (event) {
     resetActive()
     document.getElementById("home").classList.add("active")
-    document.getElementById("grid").innerHTML = ""
+    getActiveHeartbeats()
 }
 
 
@@ -114,9 +122,14 @@ document.getElementById("home").onclick = function (event) {
 document.getElementById("sapphires").onclick = function(event) {
     resetActive()
     document.getElementById("sapphires").classList.add("active")
-    document.getElementById("grid").innerHTML = ""
+    document.getElementById("page").innerHTML = ""
 
     for (var i = 0; i < sapphires.length; i++) {
+
+        var div = document.createElement("div");
+        div.className = "row"
+        div.id="grid"
+        document.getElementById("page").appendChild(div)
         var div1 = document.createElement("div");
         div1.className="col-md-3";
         document.getElementById("grid").appendChild(div1)
@@ -157,6 +170,7 @@ document.getElementById("sapphires").onclick = function(event) {
         btn.type="button"
         btn.innerHTML = "Logs"
         div.appendChild(btn)
+
     }
 }
 
@@ -165,7 +179,7 @@ document.getElementById("sapphires").onclick = function(event) {
 document.getElementById("ssvcs").onclick = function(event) {
     resetActive()
     document.getElementById("ssvcs").classList.add("active")
-    document.getElementById("grid").innerHTML = ""
+    getActiveHeartbeats()
 }
 
 
@@ -173,11 +187,33 @@ document.getElementById("ssvcs").onclick = function(event) {
 document.getElementById("settings").onclick = function() {
     resetActive()
     document.getElementById("settings").classList.add("active")
-    document.getElementById("grid").innerHTML = ""
+    getActiveHeartbeats()
 }
 
 
 
 function resetActive() {
     $('#navlinks li').removeClass('active');
+}
+
+function getActiveHeartbeats() {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", 'beats', true); // false for synchronous request
+    xmlHttp.onload = function (err) {
+        if (xmlHttp.readyState === 4) {
+            if (xmlHttp.status === 200) {
+                console.log(xmlHttp.responseText);
+
+                data = JSON.parse(xmlHttp.responseText)
+
+                document.getElementById('page').innerHTML = xmlHttp.responseText
+            } else {
+                console.error(xmlHttp.statusText);
+            }
+        }
+    }
+    xmlHttp.onerror = function (e) {
+      console.error(xmlHttp.statusText);
+    };
+    xmlHttp.send();
 }

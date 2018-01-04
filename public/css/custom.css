@@ -38,6 +38,11 @@ NavBar
 /* ------------------------------
 All CSS for Sidebar
 ------------------------------ */
+
+#e7 {
+    fill: #fff
+}
+
 #sidebar {
     min-width: 250px;
     max-width: 250px;
@@ -61,9 +66,10 @@ All CSS for Sidebar
 .sidebar-header {
     font-size: 30px;
     text-align: center;
-    padding-top: 4px;
+    padding-top: 10px;
     padding-bottom: 4px;
-    background: #000000
+    background: #000000;
+    min-height: 50px;
 }
 
 #desk {
@@ -83,13 +89,18 @@ All CSS for Sidebar
 #engine {
     display: block;
     padding: 10px;
-    padding-left: 30px;
+    padding-left: 20px;
+    padding-right: 5px;
+    font-size: .9em;
 }
 
 #engine:hover {
     color: #fff;
     background: #a2232f;
 }
+
+
+/** Arrow **/
 
 #arrow a {
     padding: 10px;
@@ -111,6 +122,7 @@ All CSS for Sidebar
 .glyphicon-menu-up {
     font-size: 15px;
     padding: 2.5px;
+    color: #a2232f;
 }
 
 a, a:hover, a:focus {
