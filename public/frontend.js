@@ -16,7 +16,6 @@ var desks = {equities: {engines: ['es_stacker_01', 'equities_01', 'equities_02',
             treasuries: {engines: ['treasuries_01', 'treasuries_02']},
             ssvcs: {engines: ['pricefeeder-basic_glbx_01', 'pricefeeder-basic_zbbf_01', 'drop-ccs2-lime-1', 'ccs2-webadmin']}}
 
-var sharedServices = {drop: []}
 
 var sapphires = []
 
@@ -44,7 +43,7 @@ if (document.getElementById("sapphires").classList.contains("active")) {
     console.log("here")
 }
 
-getActiveHeartbeats()
+//getActiveHeartbeats()
 
 
 /** Sidebar **/
@@ -175,19 +174,35 @@ document.getElementById("sapphires").onclick = function(event) {
 }
 
 
-/** Shared Services Button **/
-document.getElementById("ssvcs").onclick = function(event) {
+/** pricefeeder Button **/
+document.getElementById("pricefeeder").onclick = function(event) {
     resetActive()
-    document.getElementById("ssvcs").classList.add("active")
-    getActiveHeartbeats()
+    document.getElementById("pricefeeder").classList.add("active")
+    //getActiveHeartbeats()
 }
+
+/** drop button **/
+
+document.getElementById("drop").onclick = function(event) {
+    resetActive()
+    document.getElementById("drop").classList.add("active")
+    //getActiveHeartbeats()
+}
+
+/** risk button **/
+document.getElementById("risk").onclick = function(event) {
+    resetActive()
+    document.getElementById("risk").classList.add("active")
+    //getActiveHeartbeats()
+}
+
 
 
 /** Settings Button **/
 document.getElementById("settings").onclick = function() {
     resetActive()
     document.getElementById("settings").classList.add("active")
-    getActiveHeartbeats()
+    //getActiveHeartbeats()
 }
 
 

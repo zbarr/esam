@@ -1,13 +1,36 @@
 const express = require('express')
-var server = express()
-
 const childProcess = require('child_process');
-
 const zmq = require('zeromq');
+const path = require('path')
 
 
-server.get('/beats', function (req, res) {
+var app = express()
+var router = express.Router();
 
+
+
+var spawn = require('child_process').spawn
+var py = spawn('bash', ['dbcreator.sh'])
+var data = ""
+var datastring = ""
+var alldata = {}
+alldata.pairs = []
+
+
+py.stdout.on('data', function(data){
+    datastring += data.toString();
+    alldata.pairs.push(datastring.split(" "))
+});
+
+console.log(alldata)
+
+var beats = ""
+
+app.use(router)
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+router.get('/', function(req, res) {
     var data = []
     var response = {}
     response.pairs = []
@@ -31,25 +54,23 @@ server.get('/beats', function (req, res) {
             }
         }
 
-        res.send(JSON.stringify(response))
-        console.log("Response to /beats sent.")
+        beats = JSON.stringify(response)
+        console.log("saved the beats")
+
     })
 
-    res.setHeader('Content-Type', 'application/json');
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 })
 
-
-server.use(express.static('public'), function (req, res) {
-    console.log(req)
-});
-
-
-
+router.get('/beats', function(req, res) {
+    console.log("sending beats")
+    res.send(beats)
+})
 
 
 
 
 var port = 8080
-server.listen(port, function () {
+app.listen(port, function () {
     console.log((new Date()) + ' Server is listening on port ' + port)
 })
