@@ -3,31 +3,54 @@ const childProcess = require('child_process');
 const zmq = require('zeromq');
 const path = require('path')
 
-
 var app = express()
 var router = express.Router();
 
 
+const exec = require('child_process').exec, child
+var sh = exec('bash dbcreator.sh')
+var engines = []
+var count = 0
+var desks = {}
 
-var spawn = require('child_process').spawn
-var py = spawn('bash', ['dbcreator.sh'])
-var data = ""
-var datastring = ""
-var alldata = {}
-alldata.pairs = []
+console.log("Parsing YAMLs...")
+sh.stdout.on('data', function(data){
+    enginearray = data.split("\n")
+    for (var i = 0; i < enginearray.length; i++) {
+        if (enginearray[i].includes('version')) {
+            var engine = JSON.parse(enginearray[i])
+            engines.push(engine)
+            if (!(desks[engine['desk']])) {
+                desks[engine['desk']] = []
+            }
 
+            desks[engine['desk']].push({
+                'name': engine['name'],
+                'version': engine['version'],
+                'host': engine['host']
+            })
 
-py.stdout.on('data', function(data){
-    datastring += data.toString();
-    alldata.pairs.push(datastring.split(" "))
+        }
+    }
+    //console.log(desks)
 });
 
-console.log(alldata)
+sh.stderr.on('data', function(data) {
+    console.log(data)
+})
+
+sh.stdout.on('close', function(){
+    console.log("YAML Parsing Complete.")
+})
+
+
 
 var beats = ""
 
+app.set('view engine', 'pug')
 app.use(router)
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 router.get('/', function(req, res) {
@@ -59,7 +82,11 @@ router.get('/', function(req, res) {
 
     })
 
-    res.sendFile(path.join(__dirname, '/public/index.html'))
+    //res.sendFile(path.join(__dirname, '/public/index.html'))
+    res.render('index', desks)
+
+
+    res.render('index')
 })
 
 router.get('/beats', function(req, res) {

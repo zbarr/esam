@@ -11,6 +11,7 @@
   "dependencies": {
     "express": "^4.16.2",
     "pg": "^7.4.0",
+    "pug": "^2.0.0-rc.4",
     "zeromq": "^4.6.0"
   }
 }
