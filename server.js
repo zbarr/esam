@@ -32,7 +32,24 @@ sh.stdout.on('data', function(data){
 
         }
     }
-    //console.log(desks)
+    for (desk in desks) {
+      desks[desk].sort(function(a, b) {
+        var nameA = a['name'].toUpperCase()
+        var nameB = b['name'].toUpperCase()
+        if (nameA < nameB) {
+          return -1
+        }
+        else {
+          return 1
+        }
+      })
+    }
+
+    keys = Object.keys(desks)
+    keys.sort();
+
+
+
 });
 
 sh.stderr.on('data', function(data) {
@@ -82,16 +99,18 @@ router.get('/', function(req, res) {
 
     })
 
-    //res.sendFile(path.join(__dirname, '/public/index.html'))
-    res.render('index', desks)
+    res.render('index', {data: desks})
 
-
-    res.render('index')
 })
 
 router.get('/beats', function(req, res) {
     console.log("sending beats")
     res.send(beats)
+})
+
+router.get('/sapphires', function(req, res) {
+  console.log("sending sapphires")
+  res.render('sapphires', {data: desks})
 })
 
 

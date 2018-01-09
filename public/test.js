@@ -58,3 +58,64 @@ data = topic.replace(" ", "").toString().split('\n')
 
 <h3>Lorem Ipsum Dolor</h3>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+
+
+
+//getActiveHeartbeats()
+
+
+/** Sidebar **/
+//document.getElementById("sidebar-items").innerHTML=""
+
+for (desk in desks) {
+
+    var li = document.createElement("li")
+    document.getElementById("sidebar-items").appendChild(li)
+
+    var div = document.createElement("div")
+    div.className = "container-fluid"
+    li.appendChild(div)
+
+    var ul = document.createElement("ul")
+    ul.id = "sidebar-section"
+    ul.className = "nav navbar-nav"
+    div.appendChild(ul)
+
+    var li = document.createElement("li")
+    ul.appendChild(li)
+
+    var a = document.createElement("a")
+    a.id = "desk"
+    a.href = "#"
+    a.innerHTML = desk
+    li.appendChild(a)
+
+    var ul = document.createElement("ul")
+    ul.className = "collapse list-unstyled"
+    ul.id = desk
+    li.appendChild(ul)
+
+    for (var i = 0; i < desks[desk].engines.length; i++) {
+        var li = document.createElement("li")
+        ul.appendChild(li)
+        var a = document.createElement("a")
+        a.href="#"
+        a.id = "engine"
+        a.innerHTML = desks[desk].engines[i]
+        li.appendChild(a)
+    }
+
+
+    //Arrow stuff
+    var ul = document.createElement("ul")
+    ul.id = "arrow"
+    ul.className = "nav navbar-nav navbar-right"
+    div.appendChild(ul)
+
+    var li = document.createElement("li")
+    li.innerHTML = '<a href="#' + desk + '" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-menu-down"></i><i class="glyphicon glyphicon-menu-up"></i>'
+    ul.appendChild(li)
+    //End arrow stuff
+}

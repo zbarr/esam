@@ -43,64 +43,6 @@ if (document.getElementById("sapphires").classList.contains("active")) {
     console.log("here")
 }
 
-//getActiveHeartbeats()
-
-
-/** Sidebar **/
-//document.getElementById("sidebar-items").innerHTML=""
-for (desk in desks) {
-
-    var li = document.createElement("li")
-    document.getElementById("sidebar-items").appendChild(li)
-
-    var div = document.createElement("div")
-    div.className = "container-fluid"
-    li.appendChild(div)
-
-    var ul = document.createElement("ul")
-    ul.id = "sidebar-section"
-    ul.className = "nav navbar-nav"
-    div.appendChild(ul)
-
-    var li = document.createElement("li")
-    ul.appendChild(li)
-
-    var a = document.createElement("a")
-    a.id = "desk"
-    a.href = "#"
-    a.innerHTML = desk
-    li.appendChild(a)
-
-    var ul = document.createElement("ul")
-    ul.className = "collapse list-unstyled"
-    ul.id = desk
-    li.appendChild(ul)
-
-    for (var i = 0; i < desks[desk].engines.length; i++) {
-        var li = document.createElement("li")
-        ul.appendChild(li)
-        var a = document.createElement("a")
-        a.href="#"
-        a.id = "engine"
-        a.innerHTML = desks[desk].engines[i]
-        li.appendChild(a)
-    }
-
-
-    //Arrow stuff
-    var ul = document.createElement("ul")
-    ul.id = "arrow"
-    ul.className = "nav navbar-nav navbar-right"
-    div.appendChild(ul)
-
-    var li = document.createElement("li")
-    li.innerHTML = '<a href="#' + desk + '" data-toggle="collapse" aria-expanded="false"><i class="glyphicon glyphicon-menu-down"></i><i class="glyphicon glyphicon-menu-up"></i>'
-    ul.appendChild(li)
-    //End arrow stuff
-}
-
-
-
 
 /** Hamburger button **/
 document.getElementById("sidebarCollapse").onclick = function(event) {
@@ -121,6 +63,8 @@ document.getElementById("home").onclick = function (event) {
 document.getElementById("sapphires").onclick = function(event) {
     resetActive()
     document.getElementById("sapphires").classList.add("active")
+    getSapphires()
+    /**
     document.getElementById("page").innerHTML = ""
 
     for (var i = 0; i < sapphires.length; i++) {
@@ -169,8 +113,8 @@ document.getElementById("sapphires").onclick = function(event) {
         btn.type="button"
         btn.innerHTML = "Logs"
         div.appendChild(btn)
-
     }
+    **/
 }
 
 
@@ -231,4 +175,26 @@ function getActiveHeartbeats() {
       console.error(xmlHttp.statusText);
     };
     xmlHttp.send();
+}
+
+function getSapphires() {
+  console.log("here")
+  var xmlHttp = new XMLHttpRequest();
+  console.log("here again")
+  xmlHttp.open("GET", 'sapphires', true);
+  xmlHttp.onload = function (err) {
+    if (xmlHttp.readyState === 4) {
+      if (xmlHttp.status === 200) {
+        console.log(xmlHttp.responseText);
+        document.getElementById('page').innerHTML = xmlHttp.responseText
+      }
+      else {
+          console.error(xmlHttp.statusText);
+      }
+    }
+  }
+  xmlHttp.onerror = function (e) {
+    console.error(xmlHttp.statusText);
+  };
+  xmlHttp.send();
 }
