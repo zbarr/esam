@@ -2,8 +2,11 @@
 for value, key in data
   - names.push(key)
 - names.sort()
-- for (name in names)
-  table.table
-    thead
-      th(scope="col
+  #sapphires.container-fluid
+    - for (name in names)
+        .panel-heading= names[name]
+        - for (var i = 0; i < data[names[name]].length; i++)
+          .panel-body= data[names[name]][i].name
+            span.text-right.pull-right= data[names[name]][i].version
+    
     

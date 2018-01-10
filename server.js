@@ -110,7 +110,7 @@ router.get('/beats', function(req, res) {
 
 router.get('/sapphires', function(req, res) {
   console.log("sending sapphires")
-  res.render('sapphires', {data: desks})
+  res.send(JSON.stringify(desks))
 })
 
 

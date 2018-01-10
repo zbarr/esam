@@ -1,10 +1,7 @@
 /* ------------------------------
 General Stuff
 ------------------------------ */
-#page {
-    padding-left: 20px;
-    padding-right: 20px;
-}
+
 
 
 
@@ -32,6 +29,10 @@ NavBar
 
 #navlinks a:hover {
     color: #a2232f;
+}
+
+#content {
+  width: 100%;
 }
 
 
@@ -122,7 +123,7 @@ All CSS for Sidebar
 .glyphicon-menu-up {
     font-size: 15px;
     padding: 2.5px;
-    color: #a2232f;
+    /**color: #a2232f; **/
 }
 
 a, a:hover, a:focus {
@@ -142,8 +143,15 @@ a[aria-expanded=false] .glyphicon-menu-up {
 /* ------------------------------
 All CSS for Grid
 ------------------------------ */
+#page {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
 .panel {
     border-radius: 0;
+    /* width: 250px; */
 }
 
 .btn {
@@ -152,4 +160,12 @@ All CSS for Grid
 
 .panel-heading {
     background-color: #a2232f;
+}
+
+#sapphires.container-fluid {
+
+}
+
+#sapphires > .col-lg-3:nth-child(4n+1) {
+    /**clear: both; **/
 }

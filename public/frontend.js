@@ -24,26 +24,6 @@ for (desk in desks) {
 }
 
 
-if (document.getElementById("sapphires").classList.contains("active")) {
-    for (var i = 0; i < sapphires.length; i++) {
-        div1 = document.createElement("div");
-        div1.className="col-md-4";
-        document.getElementById("grid").appendChild(div1);
-        div2 = document.createElement("div");
-        div2.className="panel";
-        div1.appendChild(div2);
-        div3 = document.createElement("div");
-        div3.className="panel-heading";
-        div2.appendChild(div3);
-        div4 = document.createElement("div");
-        div4.className="panel-body";
-        div4.innerHTML = sapphires[i]
-        div3.appendChild(div4);
-    }
-    console.log("here")
-}
-
-
 /** Hamburger button **/
 document.getElementById("sidebarCollapse").onclick = function(event) {
     $('#sidebar').toggleClass('active');
@@ -178,15 +158,18 @@ function getActiveHeartbeats() {
 }
 
 function getSapphires() {
-  console.log("here")
   var xmlHttp = new XMLHttpRequest();
-  console.log("here again")
   xmlHttp.open("GET", 'sapphires', true);
   xmlHttp.onload = function (err) {
     if (xmlHttp.readyState === 4) {
       if (xmlHttp.status === 200) {
-        console.log(xmlHttp.responseText);
-        document.getElementById('page').innerHTML = xmlHttp.responseText
+        data = JSON.parse(xmlHttp.responseText)
+        /**
+        for (desk in data) {
+          document.getElementById('page').appendChild(createPanel(desk, data[desk]))
+        }
+        **/
+        document.getElementById('page').innerHTML = JSON.stringify(data)
       }
       else {
           console.error(xmlHttp.statusText);
@@ -197,4 +180,26 @@ function getSapphires() {
     console.error(xmlHttp.statusText);
   };
   xmlHttp.send();
+}
+
+function organizePanels() {
+  panels = document.getElementById('sapphires').value
+  for (var i = 0; i < panels.length; i++) {
+    console.log(panels[i])
+  }
+}
+
+function createPanel(name, desk) {
+  div0 = document.createElement("div")
+  div.className = "panel-heading"
+  div.innerHTML = name
+  for (i in desk) {
+    div1 = document.createElement("div")
+    div1.className = "panel-body"
+    div1.innerHTML = desk[i].name
+    span = document.createElement("span")
+    span.className = "text-right pull-right"
+    span.innerHTML =  desk[i]
+  }
+  return div
 }
