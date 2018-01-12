@@ -20,7 +20,7 @@ for root, dirs, files in os.walk("../salt-app/server-configs"):
 
                                     instance = {}
                                     instance['name'] = engine
-                                    instance['version'] = data['version']
+                                    instance['version'] = data['version'].split("_")[0]
                                     if 'desk' in data:
                                         instance['desk'] = data['desk']
                                     else:

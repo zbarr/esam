@@ -1,7 +1,4 @@
-//wsclient.run()
-
-
-
+/**
 var errors = ['ch6pslt068.concord.global:: 2018-01-03,05:30:20.381303999 [ERROR] controller(54308) ccs2/PositionProxy.cpp:604 | INVALID POD SNAP: DPSIEE: 2|6|6|5000222560|26|2: [GrossPosition(100|200000000),IntradayPosition(100|200000000)]: strategy 6 no longer belongs to portfolio 6',
 'ch6pslt068.concord.global:: 2018-01-03,05:30:20.381249644 [ERROR] controller(54308) ccs2/PositionProxy.cpp:604 | INVALID POD SNAP: DPSIEE: 2|39|145|5000091372|2|25: [GrossPosition(104|0),IntradayPosition(0|0)]: strategy 145 no longer belongs to portfolio 39',
 'ch6psltr099.concord.global:: 2018-01-03,05:17:33.277005003 [ERROR] treasuries(7110) treas_strat/Scalper.h:93 | ZCN8 Emergency Wide 3',
@@ -22,6 +19,9 @@ var sapphires = []
 for (desk in desks) {
     sapphires = sapphires.concat(desks[desk].engines)
 }
+**/
+document.getElementById("home").classList.add("active")
+getSapphires()
 
 
 /** Hamburger button **/
@@ -35,7 +35,7 @@ document.getElementById("sidebarCollapse").onclick = function(event) {
 document.getElementById("home").onclick = function (event) {
     resetActive()
     document.getElementById("home").classList.add("active")
-    getActiveHeartbeats()
+    getSapphires()
 }
 
 
@@ -129,6 +129,19 @@ document.getElementById("settings").onclick = function() {
     //getActiveHeartbeats()
 }
 
+/*******************************
+Click Handlers for sidebar
+*******************************/
+var navbar_desks = document.getElementsByClassName("desk")
+console.log(navbar_desks[0])
+for (var i = 0; i < navbar_desks.length; i++) {
+  navbar_desks[i].onclick = function() {
+    resetActive()
+    var desk = this.id.split("-")[1]
+    getSapphires(desk)
+  }
+}
+
 
 
 function resetActive() {
@@ -141,11 +154,9 @@ function getActiveHeartbeats() {
     xmlHttp.onload = function (err) {
         if (xmlHttp.readyState === 4) {
             if (xmlHttp.status === 200) {
-                console.log(xmlHttp.responseText);
-
                 data = JSON.parse(xmlHttp.responseText)
-
-                document.getElementById('page').innerHTML = xmlHttp.responseText
+                overlayBeats(data.pairs)
+                //document.getElementById('page').innerHTML = JSON.stringify(data.pairs)
             } else {
                 console.error(xmlHttp.statusText);
             }
@@ -157,19 +168,22 @@ function getActiveHeartbeats() {
     xmlHttp.send();
 }
 
-function getSapphires() {
+function getSapphires(desk) {
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open("GET", 'sapphires', true);
   xmlHttp.onload = function (err) {
     if (xmlHttp.readyState === 4) {
       if (xmlHttp.status === 200) {
         data = JSON.parse(xmlHttp.responseText)
-        /**
-        for (desk in data) {
-          document.getElementById('page').appendChild(createPanel(desk, data[desk]))
+        document.getElementById('page').innerHTML = ""
+        if (desk === undefined) {
+          document.getElementById('page').appendChild(organizedPanels(data))
         }
-        **/
-        document.getElementById('page').innerHTML = JSON.stringify(data)
+        else {
+          document.getElementById('page').appendChild(createBasicPanel(desk, data[desk]))
+        }
+        getActiveHeartbeats()
+        //document.getElementById('page').innerHTML = JSON.stringify(data)
       }
       else {
           console.error(xmlHttp.statusText);
@@ -182,24 +196,76 @@ function getSapphires() {
   xmlHttp.send();
 }
 
-function organizePanels() {
-  panels = document.getElementById('sapphires').value
-  for (var i = 0; i < panels.length; i++) {
-    console.log(panels[i])
+function organizedPanels(data) {
+  var div0 = document.createElement("div")
+  div0.className = "container-fluid"
+  var count = 0
+  for (desk in data) {
+    if (((count + 1)/2) % 1 != 0) {
+      var div1 = document.createElement("div")
+      div1.className = "col-sm-12 col-md-6 col-lg-3 panel-group"
+    }
+    div0.appendChild(div1)
+    div1.appendChild(createBasicPanel(desk, data[desk]))
+    count++
+  }
+
+  return div0
+}
+
+function createBasicPanel(name, desk) {
+
+  var div0 = document.createElement("div")
+  div0.className = "panel"
+  var div1 = document.createElement("div")
+  div1.className = "panel-heading"
+  //div1.innerHTML = name
+  div0.appendChild(div1)
+  var div3 = document.createElement("div")
+  div3.className = "panel-title"
+  div3.innerHTML = name
+  div1.appendChild(div3)
+  var div2 = document.createElement("div")
+  div2.className = "panel-body"
+  div0.appendChild(div2)
+  var table = document.createElement("table")
+  //div2.innerHTML = desk[i].name
+  table.className = "table table-condensed"
+  div2.appendChild(table)
+  var body = document.createElement("tbody")
+  table.appendChild(body)
+
+  for (i in desk) {
+    var row = document.createElement("tr")
+    row.id = desk[i].name
+    body.appendChild(row)
+    var td0 = document.createElement("td")
+    td0.innerHTML = desk[i].name
+    row.appendChild(td0)
+    var td1 = document.createElement("td")
+    td1.innerHTML = desk[i].host
+    td1.setAttribute("align", "right")
+    row.appendChild(td1)
+  }
+  return div0
+}
+
+function overlayBeats(beats) {
+  for (i in beats) {
+    try {
+      document.getElementById(beats[i][1].split("-")[1]).className = "success"
+    }
+    catch(err) {
+      console.log(beats[i][1].split("-")[1] + " is not available on this page.")
+    }
   }
 }
 
-function createPanel(name, desk) {
-  div0 = document.createElement("div")
-  div.className = "panel-heading"
-  div.innerHTML = name
-  for (i in desk) {
-    div1 = document.createElement("div")
-    div1.className = "panel-body"
-    div1.innerHTML = desk[i].name
-    span = document.createElement("span")
-    span.className = "text-right pull-right"
-    span.innerHTML =  desk[i]
+/**
+for (var i = 0; i < beats.length; i++) {
+  if (beats[i][1] == desk[i].name) {
+    row.className = "success"
+    i = beats.length
   }
-  return div
 }
+**/

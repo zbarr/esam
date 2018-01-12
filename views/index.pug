@@ -29,17 +29,19 @@ html
           - for (name in names)
             li
               .container-fluid
-                  ul#sidebar-section.nav.navbar-nav
+                  ul.sidebar-section.nav.navbar-nav
                     li
-                      a#desk(href="#")= names[name]
-                      ul(id=names[name]).collapse.list-unstyled    
-                        - for (var i = 0; i < data[names[name]].length; i++)
-                          li
-                            a#engine(href="#")= data[names[name]][i].name
-                  ul#arrow.nav.navbar-nav.navbar-right
+                      - var navbar_id = "navbar-" + names[name]
+                        a(id=navbar_id href="#").desk= names[name]
+                        - var collapse_id = "collapse-" + names[name]
+                        ul(id=collapse_id).collapse.list-unstyled
+                          - for (var i = 0; i < data[names[name]].length; i++)
+                            li
+                              a.engine(href="#")= data[names[name]][i].name
+                  ul.nav.navbar-nav.navbar-right
                     li
-                      - var reference = "#" + names[name]
-                        a(href=reference data-toggle="collapse" aria-expanded="false")
+                      - var reference = "#collapse-" + names[name]
+                        a.arrow(href=reference data-toggle="collapse" aria-expanded="false")
                           i.glyphicon.glyphicon-menu-down
                           i.glyphicon.glyphicon-menu-up
                         

@@ -1,12 +1,96 @@
 /* ------------------------------
-General Stuff
+All CSS for Sidebar
 ------------------------------ */
 
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background: #3b3b3b;
+    color: #ffffff;
+    transition: all 0.3s;
+}
 
+#sidebar a {
+    font-size: 1.1em;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    background: #000000;
+    min-height: 50px;
+}
+
+#e7 {
+    fill: #fff
+}
+
+#sidebar-items a {
+  color: white;
+  display: block;
+}
+
+#sidebar-items a:focus {
+  background: none;
+  text-decoration: none;
+}
+
+#sidebar-items a:hover {
+  background: #a2232f;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: block;
+}
+
+#sidebar-items a[aria-expanded=true] .glyphicon-menu-down {
+   display: none;
+}
+
+#sidebar-items a[aria-expanded=false] .glyphicon-menu-up {
+   display: none;
+}
+
+#sidebar-items a.desk {
+    min-width: 210px;
+    padding: 10px;
+}
+
+#sidebar-items a.engine {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 5px;
+    font-size: 1em;
+}
+
+#sidebar-items a.arrow {
+    padding: 10px;
+}
+
+#sidebar-items a.arrow:hover {
+    background: #000000;
+}
+
+
+.glyphicon-menu-down {
+    font-size: 15px;
+    padding: 2.5px;
+}
+
+.glyphicon-menu-up {
+    font-size: 15px;
+    padding: 2.5px;
+}
 
 
 /* ------------------------------
-NavBar
+All CSS for Navbar
 ------------------------------ */
 .wrapper {
     display: flex;
@@ -36,136 +120,32 @@ NavBar
 }
 
 
-/* ------------------------------
-All CSS for Sidebar
------------------------------- */
-
-#e7 {
-    fill: #fff
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
-    background: #3b3b3b;
-    color: #fff;
-    transition: all 0.3s;
-}
-
-#sidebar a {
-    /* padding: 10px; */
-    font-size: 1.1em;
-    display: block;
-}
-
-
-#sidebar.active {
-    margin-left: -250px;
-}
-
-.sidebar-header {
-    font-size: 30px;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 4px;
-    background: #000000;
-    min-height: 50px;
-}
-
-#desk {
-    min-width: 210px;
-    padding: 10px;
-}
-
-#desk:hover {
-    color: #fff;
-    background: #a2232f;
-}
-
-#desk:focus {
-    background: #a2232f;
-}
-
-#engine {
-    display: block;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 5px;
-    font-size: .9em;
-}
-
-#engine:hover {
-    color: #fff;
-    background: #a2232f;
-}
-
-
-/** Arrow **/
-
-#arrow a {
-    padding: 10px;
-}
-
-#arrow a:focus {
-    background: none;
-}
-
-#arrow a:hover {
-    background: #000000;
-}
-
-.glyphicon-menu-down {
-    font-size: 15px;
-    padding: 2.5px;
-}
-
-.glyphicon-menu-up {
-    font-size: 15px;
-    padding: 2.5px;
-    /**color: #a2232f; **/
-}
-
-a, a:hover, a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-a[aria-expanded=true] .glyphicon-menu-down {
-   display: none;
-}
-
-a[aria-expanded=false] .glyphicon-menu-up {
-   display: none;
-}
 
 /* ------------------------------
-All CSS for Grid
+All CSS for page
 ------------------------------ */
 #page {
     padding-left: 20px;
     padding-right: 20px;
 }
 
-
-.panel {
-    border-radius: 0;
-    /* width: 250px; */
-}
-
-.btn {
-    border-radius: 0;
+.panel-body {
+  padding: 0px;
 }
 
 .panel-heading {
     background-color: #a2232f;
+    color: #ffffff;
 }
 
-#sapphires.container-fluid {
-
+.table {
+  margin-bottom: 0px;
 }
 
-#sapphires > .col-lg-3:nth-child(4n+1) {
-    /**clear: both; **/
+.version {
+  align: right;
+}
+
+.btn {
+    border-radius: 0;
 }

@@ -13,6 +13,20 @@ var engines = []
 var count = 0
 var desks = {}
 
+var updateSocket = zmq.socket('sub');
+updateSocket.connect("tcp://e7heartbeat:5556");
+updateSocket.subscribe('')
+console.log('Subscribed to heartbeat updates.')
+
+updateSocket.on('message', function(topic, message)  {
+  console.log("Received data from update socket:")
+  updates = topic.toString().split(" ")
+  //updates = topic.toString().split("\\s+")
+  for (var i = 0; i < updates.length; i++) {
+    console.log(updates[i])
+  }
+})
+
 console.log("Parsing YAMLs...")
 sh.stdout.on('data', function(data){
     enginearray = data.split("\n")
@@ -29,9 +43,9 @@ sh.stdout.on('data', function(data){
                 'version': engine['version'],
                 'host': engine['host']
             })
-
         }
     }
+
     for (desk in desks) {
       desks[desk].sort(function(a, b) {
         var nameA = a['name'].toUpperCase()
@@ -47,9 +61,6 @@ sh.stdout.on('data', function(data){
 
     keys = Object.keys(desks)
     keys.sort();
-
-
-
 });
 
 sh.stderr.on('data', function(data) {
