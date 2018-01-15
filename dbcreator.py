@@ -31,7 +31,6 @@ for root, dirs, files in os.walk("../salt-app/server-configs"):
                                     #print (datastring)
                                     print (instance_string)
 
-
                     except yaml.YAMLError as exc:
                         print(exc)
 
