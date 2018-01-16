@@ -117,6 +117,7 @@ document.getElementById("drop").onclick = function(event) {
 document.getElementById("risk").onclick = function(event) {
     resetActive()
     document.getElementById("risk").classList.add("active")
+    document.getElementById('page').innerHTML = ""
     //getActiveHeartbeats()
 }
 
