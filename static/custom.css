@@ -1,0 +1,199 @@
+/* ------------------------------
+All CSS for Sidebar
+------------------------------ */
+
+#sidebar {
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 100vh;
+    /** height: 100vh; **/
+    background-color: #282828;
+    color: #ffffff;
+    transition: all 0.3s;
+}
+
+#sidebar a {
+    font-size: 1.1em;
+}
+
+#sidebar-items a {
+  font-size: 1.3em
+}
+
+#sidebar.active {
+    margin-left: -200px;
+}
+
+#sidebar .sidebar-header {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 8px;
+    /** padding-bottom: 4px; **/
+    background: #000000;
+    min-height: 50px;
+    /** height: 50px; **/
+}
+
+#e7 {
+    fill: #fff
+}
+
+#sidebar-items a {
+  color: white;
+  display: block;
+}
+
+#sidebar-items .container-fluid {
+  padding-left: 0px;
+}
+
+#sidebar-items .sidebar-desk.active {
+  background: #3b3b3b
+}
+
+#sidebar-items a:focus {
+  background: none;
+  text-decoration: none;
+}
+
+#sidebar-items a:hover {
+  /** background: #a2232f; **/
+  background: #3b3b3b;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: block;
+}
+
+
+  #sidebar-items a.sidebar-desk {
+    /** min-width: 210px; **/
+    min-width: 200px;
+    padding: 10px;
+}
+
+/**
+#sidebar-items a[aria-expanded=true] .glyphicon-menu-down {
+  display: none;
+}
+
+#sidebar-items a[aria-expanded=false] .glyphicon-menu-up {
+  display: none;
+}
+
+#sidebar-items a.engine {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 5px;
+    font-size: 1em;
+}
+
+#sidebar-items a.arrow {
+    padding: 10px;
+}
+
+#sidebar-items a.arrow:hover {
+    background: #000000;
+}
+
+
+.glyphicon-menu-down {
+    font-size: 15px;
+    padding: 2.5px;
+}
+
+.glyphicon-menu-up {
+    font-size: 15px;
+    padding: 2.5px;
+}
+**/
+
+/* ------------------------------
+All CSS for Navbar
+------------------------------ */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+
+.navbar-inverse {
+    background: #000000;
+    border: 0;
+    margin-bottom: 0px;
+}
+
+.glyphicon-menu-hamburger {
+    font-size: 20px;
+}
+
+#navlinks .container-fluid {
+    padding-left: 0px;
+}
+
+#navlinks a:hover {
+    /** color: #a2232f; **/
+    color: #ffffff
+}
+
+#content {
+  width: 100%;
+  background: #3b3b3b;
+
+}
+
+
+
+/* ------------------------------
+All CSS for page
+------------------------------ */
+
+#page {
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 7px;
+
+    /** background-color: black; **/
+}
+
+#page .container-fluid {
+  text-align: justify;
+  text-align-last: justify;
+}
+
+#page table{
+  display: inline;
+  border-collapse: collapse;
+
+}
+
+#page th {
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  font-size: 11pt;
+}
+
+#page td {
+  border: 1px solid white;
+  /** font-family: 'Circular Std Bold'; **/
+  /** font-weight: bold; **/
+  font-size: 10pt;
+  padding-top: 0px;
+  padding-right: 1px;
+  padding-left: 1px;
+  padding-bottom: 0px;
+  color: black;
+  /** background-color: #aeaaaa; **/
+}
+
+.table-block {
+  margin: 8px;
+  /* box-shadow: -4px -4px 1px 1px; */
+  display: inline-block;
+  box-shadow: 0 0 1px 4px;
+}
+
+.table-block:hover {
+  /* box-shadow: -6px -6px 3px 3px; */
+  box-shadow: 0 0 2px 7px;
+}

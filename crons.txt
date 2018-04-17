@@ -1,0 +1,277 @@
+13 17 * * 5     /usr/bin/salt -t 60 'E7CH7CCS01' cmd.run 'start "CCS12 Stop" "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "ConcordConfigurationService12"' >>/tmp/salt.log
+19 17 * * 5     /usr/bin/salt -t 60 'E7CH7CCS01' cmd.run 'start "CCS12 Start" "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "ConcordConfigurationService12"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'E7CH7088' cmd.run 'start "Instrument SRV Stop" "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "Concord_InstrumentService"' >>/tmp/salt.log
+10 12 * * 0     /usr/bin/salt -t 60 'E7CH7088' cmd.run 'start "Instrument SRV Start" "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "Concord_InstrumentService"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-Ord-Iepa"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-Ord-Iepa"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-xcbf"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-xcbf"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-xtkt"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-xtkt"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-ose-odrtest"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-ose-odrtest"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-bpod"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-bpod"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-raw-glbx"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-raw-glbx"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-RAW-GLBX-NEW"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-RAW-GLBX-NEW"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-fix"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-fix"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-raw-iepa"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-raw-iepa"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-glbx1"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-glbx1"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-glbx2"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-glbx2"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-lime"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-lime"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-ttnt"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-ttnt"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-xose1"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-xose1"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "tsdb-iepa"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "tsdb-iepa"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-iepa-7.DONOTDELETE"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-iepa-7.DONOTDELETE"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "TimeSeriesDbService-iepa-PERMTEST"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "TimeSeriesDbService-iepa-PERMTEST"' >>/tmp/salt.log
+00 12 * * 0     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-start.py" -s "tsdb-odr-glbx"' >>/tmp/salt.log
+30 17 * * 5     /usr/bin/salt -t 60 'tsb.concord.global' cmd.run 'py "D:\Program Files\Eagle Seven Technologies, LLC\service-control\service-stop.py" -s "tsdb-odr-glbx"' >>/tmp/salt.log
+30 14 * * 0    /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "controller-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-iepa-1\Start.py"' >>/tmp/salt.log
+05 17 * * 5    /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "controller-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-iepa-1\Stop.py"' >>/tmp/salt.log
+30 14 * * 0    /usr/bin/salt -t 60 'E7CH7088' cmd.run 'start "controller-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-glbx-1\Start.py"' >>/tmp/salt.log
+05 17 * * 5    /usr/bin/salt -t 60 'E7CH7088' cmd.run 'start "controller-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-glbx-1\Stop.py"' >>/tmp/salt.log
+00 16 * * 0     /usr/bin/salt -t 60 'E7CH7057' cmd.run 'start "drop-all-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-iepa-1\Start.py"' >>/tmp/salt.log
+30 18 * * 1-4   /usr/bin/salt -t 60 'E7CH7057' cmd.run 'start "drop-all-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-iepa-1\Start.py"' >>/tmp/salt.log
+06 17 * * 1-5   /usr/bin/salt -t 60 'E7CH7057' cmd.run 'start "drop-all-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-iepa-1\Stop.py"' >>/tmp/salt.log
+30 16 * * 0     /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "downloader-all-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\downloader-all-iepa-1\Start.py" -p' >>/tmp/salt.log
+40 18 * * 1-5   /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "downloader-all-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\downloader-all-iepa-1\Start.py" -p' >>/tmp/salt.log
+45 14 * * 0     /usr/bin/salt -t 60 'E7CH7088' cmd.run 'start "downloader-all-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\downloader-all-glbx-1\Start.py" -p' >>/tmp/salt.log
+15 16 * * 1-5   /usr/bin/salt -t 60 'E7CH7088' cmd.run 'start "downloader-all-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\downloader-all-glbx-1\Start.py" -p' >>/tmp/salt.log
+30 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-iepa-6" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-6\Start.py"' >>/tmp/salt.log
+30 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-glbx-7" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-7\Start.py"' >>/tmp/salt.log
+30 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-iepa-8" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-8\Start.py"' >>/tmp/salt.log
+00 16 * * 0     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-glbx-9" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-9\Start.py"' >>/tmp/salt.log
+00 16 * * 0     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-iepa-10" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-10\Start.py"' >>/tmp/salt.log
+32 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-glbx-11" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-11\Start.py"' >>/tmp/salt.log
+32 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-iepa-12" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-12\Start.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-iepa-6" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-6\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-glbx-7" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-7\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-iepa-8" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-8\Stop.py"' >>/tmp/salt.log
+10 17 * * 5     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-glbx-9" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-9\Stop.py"' >>/tmp/salt.log
+10 17 * * 5     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-iepa-10" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-10\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-glbx-11" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-11\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7066' cmd.run 'start "order-router-natgas-iepa-12" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-12\Stop.py"' >>/tmp/salt.log
+30 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-1\Start.py"' >>/tmp/salt.log
+30 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-iepa-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-2\Start.py"' >>/tmp/salt.log
+31 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-3\Start.py"' >>/tmp/salt.log
+31 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-iepa-4" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-4\Start.py"' >>/tmp/salt.log
+32 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-5\Start.py"' >>/tmp/salt.log
+32 18 * * 0-4     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-iepa-6" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-6\Start.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-1\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-iepa-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-2\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-3\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-iepa-4" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-4\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-glbx-5\Stop.py"' >>/tmp/salt.log
+25 16 * * 1-5     /usr/bin/salt -t 60 'E7CH7086' cmd.run 'start "order-router-natgas-iepa-6" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-6\Stop.py"' >>/tmp/salt.log
+50 16 * * 1-4   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "hydra-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-1\Start.py"' >>/tmp/salt.log
+50 15 * * 0   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "hydra-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-1\Start.py"' >>/tmp/salt.log
+16 16 * * 1-5   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "hydra-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-1\Stop.py"' >>/tmp/salt.log
+50 16 * * 1-4  /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "order-router-metals-ttnt-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-ttnt-1\Start.py"' >>/tmp/salt.log
+50 15 * * 0  /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "order-router-metals-ttnt-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-ttnt-1\Start.py"' >>/tmp/salt.log
+16 16 * * 1-5  /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "order-router-metals-ttnt-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-ttnt-1\Stop.py"' >>/tmp/salt.log
+50 16 * * 1-4  /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "order-router-metals-ttnt-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-ttnt-2\Start.py"' >>/tmp/salt.log
+50 15 * * 0  /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "order-router-metals-ttnt-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-ttnt-2\Start.py"' >>/tmp/salt.log
+16 16 * * 1-5  /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "order-router-metals-ttnt-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-ttnt-2\Stop.py"' >>/tmp/salt.log
+05 18 * * 0-4  /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "order-router-metals-ttnt-3" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-ttnt-3\Start.py"' >>/tmp/salt.log
+05 17 * * 1-5  /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "order-router-metals-ttnt-3" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-ttnt-3\Stop.py"' >>/tmp/salt.log
+55 17 * * 0-4   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "helen-natgas-gwm-1" "D:\Program Files\Eagle Seven Technologies, LLC\helen-natgas-gwm-1\Start.py"' >>/tmp/salt.log
+15 17 * * 1-5   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "helen-natgas-gwm-1" "D:\Program Files\Eagle Seven Technologies, LLC\helen-natgas-gwm-1\Stop.py"' >>/tmp/salt.log
+00 00 * * 1-5   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "order-router-natgas-iepa-3" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-3\Start.py"' >>/tmp/salt.log
+15 12 * * 1-5   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "order-router-natgas-iepa-3" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-3\Stop.py"' >>/tmp/salt.log
+45 18 * * 0-4   /usr/bin/salt -t 60 'E7CH70108' cmd.run 'start "order-router-glbx-1 for Helen 108" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-crude-glbx-2\Start.py"' >>/tmp/salt.log
+10 17 * * 1-5   /usr/bin/salt -t 60 'E7CH70108' cmd.run 'start "order-router-glbx-1 for Helen 108" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-crude-glbx-2\Stop.py"' >>/tmp/salt.log
+45 18 * * 0-4   /usr/bin/salt -t 60 'E7CH70108' cmd.run 'start "order-router-iepa-2 for Helen 108" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-crude-iepa-1\Start.py"' >>/tmp/salt.log
+10 17 * * 1-5   /usr/bin/salt -t 60 'E7CH70108' cmd.run 'start "order-router-iepa-2 for Helen 108" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-crude-iepa-1\Stop.py"' >>/tmp/salt.log
+45 18 * * 0-4   /usr/bin/salt -t 60 'E7CH70108' cmd.run 'start "order-router-glbx-4 for Helen 108" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-crude-glbx-4\Start.py"' >>/tmp/salt.log
+10 17 * * 1-5   /usr/bin/salt -t 60 'E7CH70108' cmd.run 'start "order-router-glbx-4 for Helen 108" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-crude-glbx-4\Stop.py"' >>/tmp/salt.log
+45 18 * * 0-4   /usr/bin/salt -t 60 'E7CH70108' cmd.run 'start "order-router-iepa-3 for Helen 108" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-crude-iepa-3\Start.py"' >>/tmp/salt.log
+10 17 * * 1-5   /usr/bin/salt -t 60 'E7CH70108' cmd.run 'start "order-router-iepa-3 for Helen 108" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-crude-iepa-3\Stop.py"' >>/tmp/salt.log
+05 18 * * 0-4   /usr/bin/salt -t 60 'E7CH70113' cmd.run 'start "hydra-jlr-uk-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-jlr-uk-1\Start.py"' >>/tmp/salt.log
+14 16 * * 1-5   /usr/bin/salt -t 60 'E7CH70113' cmd.run 'start "hydra-jlr-uk-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-jlr-uk-1\Stop.py"' >>/tmp/salt.log
+05 18 * * 0-4   /usr/bin/salt -t 60 'E7CH70113' cmd.run 'start "hydra-jlr-dutch-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-jlr-dutch-2\Start.py"' >>/tmp/salt.log
+14 16 * * 1-5   /usr/bin/salt -t 60 'E7CH70113' cmd.run 'start "hydra-jlr-dutch-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-jlr-dutch-2\Stop.py"' >>/tmp/salt.log
+55 17 * * 0-4   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "order-router-natgas-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-1\Start.py"' >>/tmp/salt.log
+14 17 * * 1-5   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "order-router-natgas-iepa-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-1\Stop.py"' >>/tmp/salt.log
+55 17 * * 0-4   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "order-router-natgas-iepa-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-2\Start.py"' >>/tmp/salt.log
+15 16 * * 1-5   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "order-router-natgas-iepa-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-natgas-iepa-2\Stop.py"' >>/tmp/salt.log
+55 17 * * 0-4   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "helen-natgas-ttf-2" "D:\Program Files\Eagle Seven Technologies, LLC\helen-natgas-ttf-2\Start.py"' >>/tmp/salt.log
+15 17 * * 1-5   /usr/bin/salt -t 60 'E7CH70102' cmd.run 'start "helen-natgas-ttf-2" "D:\Program Files\Eagle Seven Technologies, LLC\helen-natgas-ttf-2\Stop.py"' >>/tmp/salt.log
+55 18 * * 0-4   /usr/bin/salt -t 60 'ch7pswtr129.concord.global' cmd.run 'start "helen-crude-brn-1" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-brn-1\Start.py"' >>/tmp/salt.log
+05 17 * * 1-5   /usr/bin/salt -t 60 'ch7pswtr129.concord.global' cmd.run 'start "helen-crude-brn-1" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-brn-1\Stop.py"' >>/tmp/salt.log
+55 18 * * 0-4   /usr/bin/salt -t 60 'ch7pswtr129.concord.global' cmd.run 'start "helen-crude-go-2" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-go-2\Start.py"' >>/tmp/salt.log
+05 17 * * 1-5   /usr/bin/salt -t 60 'ch7pswtr129.concord.global' cmd.run 'start "helen-crude-go-2" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-go-2\Stop.py"' >>/tmp/salt.log
+56 18 * * 0-4   /usr/bin/salt -t 60 'ch7pswtr129.concord.global' cmd.run 'start "helen-crude-syn-3" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-syn-3\Start.py"' >>/tmp/salt.log
+06 17 * * 1-5   /usr/bin/salt -t 60 'ch7pswtr129.concord.global' cmd.run 'start "helen-crude-syn-3" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-syn-3\Stop.py"' >>/tmp/salt.log
+40 16 * * 0-4    /usr/bin/salt -t 60 'E7CH70130' cmd.run 'start "hydra-hawk-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-hawk-1\Start.py"' >>/tmp/salt.log
+05 16 * * 1-5  /usr/bin/salt -t 60 'E7CH70130' cmd.run 'start "hydra-hawk-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-hawk-1\Stop.py"' >>/tmp/salt.log
+35 18 * * 1-4  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE OTC Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-otc-iepa-3\Start.py"' >>/tmp/salt.log
+35 18 * * 1-4  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Oil Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-oil-iepa-7\Start.py"' >>/tmp/salt.log
+35 18 * * 1-4  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Metals Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-metals-iepa-9\Start.py"' >>/tmp/salt.log
+35 18 * * 1-4  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE General Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-iepa-1\Start.py"' >>/tmp/salt.log
+35 18 * * 1-4  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Equities Indicies Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-equity-indices-iepa-4\Start.py"' >>/tmp/salt.log
+35 18 * * 1-4  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Dutch Gas Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-dutch-iepa-8\Start.py"' >>/tmp/salt.log
+35 18 * * 1-4  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Oil Brent Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-oil-brent-iepa-6\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE OTC Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-otc-iepa-3\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Oil Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-oil-iepa-7\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Metals Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-metals-iepa-9\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE General Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-iepa-1\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Equities Indicies Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-equity-indices-iepa-4\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Dutch Gas Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-dutch-iepa-8\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Oil Brent Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-oil-brent-iepa-6\Start.py"' >>/tmp/salt.log
+15 17 * * 1-5  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE OTC Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-otc-iepa-3\Stop.py"' >>/tmp/salt.log
+15 17 * * 1-5  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Oil Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-oil-iepa-7\Stop.py"' >>/tmp/salt.log
+15 17 * * 1-5  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Metals Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-metals-iepa-9\Stop.py"' >>/tmp/salt.log
+15 17 * * 1-5  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE General Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-iepa-1\Stop.py"' >>/tmp/salt.log
+15 17 * * 1-5  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Equities Indices Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-equity-indices-iepa-4\Stop.py"' >>/tmp/salt.log
+15 17 * * 1-5  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Dutch Gas Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-dutch-iepa-8\Stop.py"' >>/tmp/salt.log
+15 17 * * 1-5  /usr/bin/salt -t 60 'CH7PSWSS137' cmd.run 'start "ICE Oil Brent Feeder" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-oil-brent-iepa-6\Stop.py"' >>/tmp/salt.log
+40 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-interestrate-mdp-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-interestrate-mdp-glbx-3\Start.py" -x' >>/tmp/salt.log
+40 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-cme-partners-mdp-glbx-6" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-cme-partners-mdp-glbx-6\Start.py" -x' >>/tmp/salt.log
+40 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-natgas-nymex-crude-mdp-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-nymex-crude-mdp-glbx-5\Start.py"' >>/tmp/salt.log
+40 16 * * 1-4  /usr/bin/salt -t 60 'ch6pswss085.concord.global' cmd.run 'start "feeder-natgas-nymex-noncrude-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-nymex-noncrude-glbx-2\Start.py"' >>/tmp/salt.log
+40 16 * * 1-4  /usr/bin/salt -t 60 'ch6pswss085.concord.global' cmd.run 'start "feeder-primary-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-glbx-1\Start.py"' >>/tmp/salt.log
+40 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-emini-mdp-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-emini-mdp-glbx-2\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-interestrate-mdp-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-interestrate-mdp-glbx-3\Start.py" -x' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-cme-partners-mdp-glbx-6" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-cme-partners-mdp-glbx-6\Start.py" -x' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-natgas-nymex-crude-mdp-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-nymex-crude-mdp-glbx-5\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'ch6pswss085.concord.global' cmd.run 'start "feeder-natgas-nymex-noncrude-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-nymex-noncrude-glbx-2\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'ch6pswss085.concord.global' cmd.run 'start "feeder-primary-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-glbx-1\Start.py"' >>/tmp/salt.log
+00 15 * * 0  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-emini-mdp-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-emini-mdp-glbx-2\Start.py"' >>/tmp/salt.log
+30 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-interestrate-mdp-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-interestrate-mdp-glbx-3\Stop.py"' >>/tmp/salt.log
+14 16 * * 5  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-interestrate-mdp-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-interestrate-mdp-glbx-3\Stop.py"' >>/tmp/salt.log
+30 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-cme-partners-mdp-glbx-6" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-cme-partners-mdp-glbx-6\Stop.py"' >>/tmp/salt.log
+14 16 * * 5  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-cme-partners-mdp-glbx-6" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-cme-partners-mdp-glbx-6\Stop.py"' >>/tmp/salt.log
+30 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-natgas-nymex-crude-mdp-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-nymex-crude-mdp-glbx-5\Stop.py"' >>/tmp/salt.log
+14 16 * * 5  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-natgas-nymex-crude-mdp-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-nymex-crude-mdp-glbx-5\Stop.py"' >>/tmp/salt.log
+30 16 * * 1-4  /usr/bin/salt -t 60 'ch6pswss085.concord.global' cmd.run 'start "feeder-natgas-nymex-noncrude-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-nymex-noncrude-glbx-2\Stop.py"' >>/tmp/salt.log
+14 16 * * 5  /usr/bin/salt -t 60 'ch6pswss085.concord.global' cmd.run 'start "feeder-natgas-nymex-noncrude-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-natgas-nymex-noncrude-glbx-2\Stop.py"' >>/tmp/salt.log
+30 16 * * 1-4  /usr/bin/salt -t 60 'ch6pswss085.concord.global' cmd.run 'start "feeder-primary-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-glbx-1\Stop.py"' >>/tmp/salt.log
+14 16 * * 5  /usr/bin/salt -t 60 'ch6pswss085.concord.global' cmd.run 'start "feeder-primary-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-glbx-1\Stop.py"' >>/tmp/salt.log
+30 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-emini-mdp-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-emini-mdp-glbx-2\Stop.py"' >>/tmp/salt.log
+14 16 * * 5  /usr/bin/salt -t 60 'E7CH6046' cmd.run 'start "feeder-emini-mdp-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-emini-mdp-glbx-2\Stop.py"' >>/tmp/salt.log
+45 16 * * 0-4   /usr/bin/salt -t 60 'ch2pswtr011' cmd.run 'start "hydra1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-1\Start.py"' >>/tmp/salt.log
+15 16 * * 1-5   /usr/bin/salt -t 60 'ch2pswtr011' cmd.run 'start "hydra1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-1\Stop.py"' >>/tmp/salt.log
+45 16 * * 0-4   /usr/bin/salt -t 60 'ch2pswtr012' cmd.run 'start "hydra-natgas-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-1\Start.py"' >>/tmp/salt.log
+15 16 * * 1-5   /usr/bin/salt -t 60 'ch2pswtr012' cmd.run 'start "hydra-natgas-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-1\Stop.py"' >>/tmp/salt.log
+00 16 * * 0     /usr/bin/salt -t 60 'ch2pswtr011' cmd.run 'start "hydra-natgas-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-2\Start.py"' >>/tmp/salt.log
+45 16 * * 1-4   /usr/bin/salt -t 60 'ch2pswtr011' cmd.run 'start "hydra-natgas-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-2\Start.py"' >>/tmp/salt.log
+15 16 * * 1-5   /usr/bin/salt -t 60 'ch2pswtr011' cmd.run 'start "hydra-natgas-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-2\Stop.py "' >>/tmp/salt.log
+45 16 * * 0   /usr/bin/salt -t 60 'E7CH70104' cmd.run 'start "hydra-natgas-3" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-3\Start.py"' >>/tmp/salt.log
+15 16 * * 5   /usr/bin/salt -t 60 'E7CH70104' cmd.run 'start "hydra-natgas-3" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-natgas-3\Stop.py"' >>/tmp/salt.log
+00 16 * * 0   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "feeder-xlme-ttnt-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-xlme-ttnt-1\Start.py"' >>/tmp/salt.log
+00 16 * * 5   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "feeder-xlme-ttnt-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-xlme-ttnt-1\Stop.py"' >>/tmp/salt.log
+00 20 * * 0   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "feeder-hkex-ttnt-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-hkex-ttnt-2\Start.py"' >>/tmp/salt.log
+01 16 * * 5   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "feeder-hkex-ttnt-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-hkex-ttnt-2\Stop.py"' >>/tmp/salt.log
+00 17 * * 0   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "feeder-xtkt-ttnt-3" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-xtkt-ttnt-3\Start.py"' >>/tmp/salt.log
+00 17 * * 5   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "feeder-xtkt-ttnt-3" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-xtkt-ttnt-3\Stop.py"' >>/tmp/salt.log
+01 16 * * 0   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "capture-service-ttnt-mkt-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-ttnt-mkt-metals-1\start.py"' >>/tmp/salt.log
+05 17 * * 5   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "capture-service-ttnt-mkt-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-ttnt-mkt-metals-1\stop.py"' >>/tmp/salt.log
+00 16 * * 0   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "capture-service-ttnt-ord-3" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-ttnt-ord-3\start.py"' >>/tmp/salt.log
+05 17 * * 5   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "capture-service-ttnt-ord-3" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-ttnt-ord-3\stop.py"' >>/tmp/salt.log
+46 18 * * 0-5   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "downloader-xlme-ttnt-1" "D:\Program Files\Eagle Seven Technologies, LLC\downloader-xlme-ttnt-1\Start.py" -p' >>/tmp/salt.log
+00 19 * * 0   /usr/bin/salt -t 60 'E7CH7097' cmd.run 'start "downloader-hkex-ttnt-2" "D:\Program Files\Eagle Seven Technologies, LLC\downloader-hkex-ttnt-2\Start.py" -p' >>/tmp/salt.log
+40 16 * * 1-4   /usr/bin/salt -t 60 'E7CH6053' cmd.run 'start "hydra-treasuries-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-treasuries-1\Start.py"' >>/tmp/salt.log
+05 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6053' cmd.run 'start "hydra-treasuries-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-treasuries-1\Stop.py"' >>/tmp/salt.log
+00 15 * * 0     /usr/bin/salt -t 60 'E7CH6053' cmd.run 'start "hydra-treasuries-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-treasuries-1\Start.py"' >>/tmp/salt.log
+40 16 * * 0-4   /usr/bin/salt -t 60 'E7CH6054' cmd.run 'start "hydra-crude-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-crude-1\Start.py"' >>/tmp/salt.log
+20 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6054' cmd.run 'start "hydra-crude-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-crude-1\Stop.py"' >>/tmp/salt.log
+40 16 * * 0-4   /usr/bin/salt -t 60 'E7CH6054' cmd.run 'start "hydra-crude-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-crude-2\Start.py"' >>/tmp/salt.log
+20 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6054' cmd.run 'start "hydra-crude-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-crude-2\Stop.py"' >>/tmp/salt.log
+45 16 * * 0-4   /usr/bin/salt -t 60 'E7CH6059' cmd.run 'start "helen-natgas-1" "D:\Program Files\Eagle Seven Technologies, LLC\helen-natgas-1\Start.py"' >>/tmp/salt.log
+15 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6059' cmd.run 'start "helen-natgas-1" "D:\Program Files\Eagle Seven Technologies, LLC\helen-natgas-1\Stop.py"' >>/tmp/salt.log
+45 16 * * 0-4   /usr/bin/salt -t 60 'CH6PSWTR056' cmd.run 'start "helen-crude-cl-1" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-cl-1\Start.py"' >>/tmp/salt.log
+05 16 * * 1-5   /usr/bin/salt -t 60 'CH6PSWTR056' cmd.run 'start "helen-crude-cl-1" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-cl-1\Stop.py"' >>/tmp/salt.log
+45 16 * * 0-4   /usr/bin/salt -t 60 'CH6PSWTR056' cmd.run 'start "helen-crude-ho-2" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-ho-2\Start.py"' >>/tmp/salt.log
+05 16 * * 1-5   /usr/bin/salt -t 60 'CH6PSWTR056' cmd.run 'start "helen-crude-ho-2" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-ho-2\Stop.py"' >>/tmp/salt.log
+45 16 * * 0-4   /usr/bin/salt -t 60 'CH6PSWTR056' cmd.run 'start "helen-crude-rb-3" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-rb-3\Start.py"' >>/tmp/salt.log
+05 16 * * 1-5   /usr/bin/salt -t 60 'CH6PSWTR056' cmd.run 'start "helen-crude-rb-3" "D:\Program Files\Eagle Seven Technologies, LLC\helen-crude-rb-3\Stop.py"' >>/tmp/salt.log
+00 17 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "capture-service-xtkt-mkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-xtkt-mkt-1\start.py"' >>/tmp/salt.log
+05 18 * * 5  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "capture-service-xtkt-mkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-xtkt-mkt-1\stop.py"' >>/tmp/salt.log
+00 17 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "capture-service-xtkt-odr-2" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-xtkt-odr-2\start.py"' >>/tmp/salt.log
+05 18 * * 5  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "capture-service-xtkt-odr-2" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-xtkt-odr-2\stop.py"' >>/tmp/salt.log
+40 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-1\Start.py"' >>/tmp/salt.log
+40 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-2\Start.py"' >>/tmp/salt.log
+41 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-3\Start.py"' >>/tmp/salt.log
+41 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-4" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-4\Start.py"' >>/tmp/salt.log
+42 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-5\Start.py"' >>/tmp/salt.log
+42 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-6" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-6\Start.py"' >>/tmp/salt.log
+43 16 * * 1-4  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-7" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-7\Start.py"' >>/tmp/salt.log
+31 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-1\Stop.py"' >>/tmp/salt.log
+31 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-2\Stop.py"' >>/tmp/salt.log
+31 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-3\Stop.py"' >>/tmp/salt.log
+31 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-4" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-4\Stop.py"' >>/tmp/salt.log
+31 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-5\Stop.py"' >>/tmp/salt.log
+31 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-6" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-6\Stop.py"' >>/tmp/salt.log
+31 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-7" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-7\Stop.py"' >>/tmp/salt.log
+05 16 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-1\Start.py"' >>/tmp/salt.log
+05 16 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-2" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-2\Start.py"' >>/tmp/salt.log
+05 16 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-3" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-3\Start.py"' >>/tmp/salt.log
+05 16 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-4" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-4\Start.py"' >>/tmp/salt.log
+05 16 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-5" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-5\Start.py"' >>/tmp/salt.log
+05 16 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-6" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-6\Start.py"' >>/tmp/salt.log
+05 16 * * 0  /usr/bin/salt -t 60 'E7CH6030' cmd.run 'start "drop-all-glbx-7" "D:\Program Files\Eagle Seven Technologies, LLC\drop-all-glbx-7\Start.py"' >>/tmp/salt.log
+22 16 * * 0     /usr/bin/salt -t 60 'E7CH6043' cmd.run 'start "order-router-cpcv-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-cpcv-glbx-1\Start.py" -w' >>/tmp/salt.log
+05 16 * * 5     /usr/bin/salt -t 60 'E7CH6043' cmd.run 'start "order-router-cpcv-glbx-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-cpcv-glbx-1\Stop.py"' >>/tmp/salt.log
+00 16 * * 0     /usr/bin/salt -t 60 'E7CH6045' cmd.run 'start "hydra-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-1\Start.py" -w' >>/tmp/salt.log
+05 17 * * 5     /usr/bin/salt -t 60 'E7CH6045' cmd.run 'start "hydra-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-1\Stop.py"' >>/tmp/salt.log
+03 17 * * 0-4     /usr/bin/salt -t 60 'E7CH6045' cmd.run 'start "hydra-metals-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-2\Start.py" -w' >>/tmp/salt.log
+20 16 * * 1-5     /usr/bin/salt -t 60 'E7CH6045' cmd.run 'start "hydra-metals-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-2\Stop.py"' >>/tmp/salt.log
+00 15 * * 0     /usr/bin/salt -t 60 'E7CH6058' cmd.run 'start "hydra-equities-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-equities-2\Start.py" -w' >>/tmp/salt.log
+05 16 * * 5     /usr/bin/salt -t 60 'E7CH6058' cmd.run 'start "hydra-equities-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-equities-2\Stop.py"' >>/tmp/salt.log
+00 16 * * 0     /usr/bin/salt -t 60 'E7CH6051' cmd.run 'start "hydra-cbl-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-cbl-1\Start.py" -w' >>/tmp/salt.log
+00 17 * * 5     /usr/bin/salt -t 60 'E7CH6051' cmd.run 'start "hydra-cbl-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-cbl-1\Stop.py"' >>/tmp/salt.log
+03 17 * * 0-4   /usr/bin/salt -t 60 'E7CH6023' cmd.run 'start "hydra-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-1\Start.py"' >>/tmp/salt.log
+20 16 * * 1-5   /usr/bin/salt -t 60 'E7CH6023' cmd.run 'start "hydra-metals-1" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-1\Stop.py"' >>/tmp/salt.log
+15 16 * * 0   /usr/bin/salt -t 60 'E7CH6023' cmd.run 'start "hydra-metals-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-2\Start.py"' >>/tmp/salt.log
+05 17 * * 5   /usr/bin/salt -t 60 'E7CH6023' cmd.run 'start "hydra-metals-2" "D:\Program Files\Eagle Seven Technologies, LLC\hydra-metals-2\Stop.py"' >>/tmp/salt.log
+#00 15 * * 0  /usr/bin/salt -t 60 'ny1pswtr070.concord.global' cmd.run 'start "capture-service-useq-odr-3" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-useq-odr-3\start.py"' >>/tmp/salt.log
+#10 17 * * 5  /usr/bin/salt -t 60 'ny1pswtr070.concord.global' cmd.run 'start "capture-service-useq-odr-3" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-useq-odr-3\stop.py"' >>/tmp/salt.log
+55 02 * * 1-5   /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "capture-service-lime-useq-1" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-lime-useq-1\start.py"' >>/tmp/salt.log
+15 17 * * 1-5   /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "capture-service-lime-useq-1" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-lime-useq-1\stop.py"' >>/tmp/salt.log
+00 17 * * 0  /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "capture-service-lime-odr-2" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-lime-odr-2\start.py"' >>/tmp/salt.log
+05 17 * * 5  /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "capture-service-lime-odr-2" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-lime-odr-2\stop.py"' >>/tmp/salt.log
+30 14 * * 0     /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "controller-useq-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-useq-1\Start.py"' >>/tmp/salt.log
+15 17 * * 5     /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "controller-useq-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-useq-1\Stop.py"' >>/tmp/salt.log
+50 02 * * 1-5   /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "feeder-nyse-arca-useq-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-nyse-arca-useq-1\Start.py"' >>/tmp/salt.log
+05 19 * * 1-4   /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "feeder-nyse-arca-useq-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-nyse-arca-useq-1\Stop.py"' >>/tmp/salt.log
+15 17 * * 5     /usr/bin/salt -t 60 'ny5pswtr034' cmd.run 'start "feeder-nyse-arca-useq-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-nyse-arca-useq-1\Stop.py"' >>/tmp/salt.log
+30 14 * * 0    /usr/bin/salt -t 60 'tk1pswtr020.concord.global' cmd.run 'start "controller-xose-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-xose-1\Start.py"' >>/tmp/salt.log
+05 17 * * 5    /usr/bin/salt -t 60 'tk1pswtr020.concord.global' cmd.run 'start "controller-xose-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-xose-1\Stop.py"' >>/tmp/salt.log
+03 02 * * 1-5   /usr/bin/salt -t 60 'tk1pswtr020.concord.global' cmd.run 'start "settlement-xose-1" "D:\Program Files\Eagle Seven Technologies, LLC\settlement-xose-1\Start.py" -p' >>/tmp/salt.log
+03 17 * * 0-4    /usr/bin/salt -t 60 'tk1pswtr020.concord.global' cmd.run 'start "downloader-all-xose-1" "D:\Program Files\Eagle Seven Technologies, LLC\downloader-all-xose-1\Start.py" -p' >>/tmp/salt.log
+16 17 * * 0-4  /usr/bin/salt -t 60 'tk1pswtr017.concord.global' cmd.run 'start "feeder-primary-xose-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-xose-1\Start.py"' >>/tmp/salt.log
+00 02 * * 1-5  /usr/bin/salt -t 60 'tk1pswtr017.concord.global' cmd.run 'start "feeder-primary-xose-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-xose-1\Stop.py"' >>/tmp/salt.log
+10 02 * * 1-5  /usr/bin/salt -t 60 'tk1pswtr017.concord.global' cmd.run 'start "feeder-primary-xose-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-xose-1\Start.py"' >>/tmp/salt.log
+45 15 * * 1-5  /usr/bin/salt -t 60 'tk1pswtr017.concord.global' cmd.run 'start "feeder-primary-xose-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-xose-1\Stop.py"' >>/tmp/salt.log
+21 17 * * 0-4  /usr/bin/salt -t 60 'tk1pswtr017.concord.global' cmd.run 'start "feeder-jgb-xose-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-jgb-xose-2\Start.py"' >>/tmp/salt.log
+00 02 * * 1-5  /usr/bin/salt -t 60 'tk1pswtr017.concord.global' cmd.run 'start "feeder-jgb-xose-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-jgb-xose-2\Stop.py"' >>/tmp/salt.log
+15 02 * * 1-5  /usr/bin/salt -t 60 'tk1pswtr017.concord.global' cmd.run 'start "feeder-jgb-xose-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-jgb-xose-2\Start.py"' >>/tmp/salt.log
+45 15 * * 1-5  /usr/bin/salt -t 60 'tk1pswtr017.concord.global' cmd.run 'start "feeder-jgb-xose-2" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-jgb-xose-2\Stop.py"' >>/tmp/salt.log
+00 17 * * 0    /usr/bin/salt -t 60 'tk1pswtr020.concord.global' cmd.run 'start "capture-service-xose-mkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-xose-mkt-1\start.py"' >>/tmp/salt.log
+10 17 * * 5    /usr/bin/salt -t 60 'tk1pswtr020.concord.global' cmd.run 'start "capture-service-xose-mkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\capture-service-xose-mkt-1\stop.py"' >>/tmp/salt.log
+30 15 * * 0    /usr/bin/salt -t 60 'tk2pswtr012.concord.global' cmd.run 'start "controller-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-xtkt-1\Start.py"' >>/tmp/salt.log
+05 17 * * 5    /usr/bin/salt -t 60 'tk2pswtr012.concord.global' cmd.run 'start "controller-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\controller-xtkt-1\Stop.py"' >>/tmp/salt.log
+00 02 * * 1-5  /usr/bin/salt -t 60 'tk2pswtr012.concord.global' cmd.run 'start "settlement-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\settlement-xtkt-1\Start.py" -p' >>/tmp/salt.log
+01 18 * * 0-4  /usr/bin/salt -t 60 'tk2pswtr012.concord.global' cmd.run 'start "download-metals-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\downloader-all-xtkt-1\Start.py" -p' >>/tmp/salt.log
+30 17 * * 0-4  /usr/bin/salt -t 60 'tk2pswtr012.concord.global' cmd.run 'start "feeder-primary-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-xtkt-1\Start.py"' >>/tmp/salt.log
+45 15 * * 1-5  /usr/bin/salt -t 60 'tk2pswtr012.concord.global' cmd.run 'start "feeder-primary-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\feeder-primary-xtkt-1\Stop.py"' >>/tmp/salt.log
+00 17 * * 0-4   /usr/bin/salt -t 60 'tk2pswtr012.concord.global' cmd.run 'start "drop-metals-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\drop-metals-xtkt-1\Start.py"' >>/tmp/salt.log
+45 15 * * 1-5   /usr/bin/salt -t 60 'tk2pswtr012.concord.global' cmd.run 'start "drop-metals-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\drop-metals-xtkt-1\Stop.py"' >>/tmp/salt.log
+00 17 * * 0-4   /usr/bin/salt -t 60 'tk2pswtr011.concord.global' cmd.run 'start "order-router-metals-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-xtkt-1\Start.py"' >>/tmp/salt.log
+45 15 * * 1-5   /usr/bin/salt -t 60 'tk2pswtr011.concord.global' cmd.run 'start "order-router-metals-xtkt-1" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-xtkt-1\Stop.py"' >>/tmp/salt.log
+00 17 * * 0-4   /usr/bin/salt -t 60 'tk2pswtr011.concord.global' cmd.run 'start "order-router-metals-xtkt-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-xtkt-2\Start.py"' >>/tmp/salt.log
+45 15 * * 1-5   /usr/bin/salt -t 60 'tk2pswtr011.concord.global' cmd.run 'start "order-router-metals-xtkt-2" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-xtkt-2\Stop.py"' >>/tmp/salt.log
+00 17 * * 0-4   /usr/bin/salt -t 60 'tk2pswtr011.concord.global' cmd.run 'start "order-router-metals-xtkt-3" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-xtkt-3\Start.py"' >>/tmp/salt.log
+45 15 * * 1-5   /usr/bin/salt -t 60 'tk2pswtr011.concord.global' cmd.run 'start "order-router-metals-xtkt-3" "D:\Program Files\Eagle Seven Technologies, LLC\order-router-metals-xtkt-3\Stop.py"' >>/tmp/salt.log

@@ -1,0 +1,57 @@
+<!doctype html>
+<div class="container-fluid">
+{% set column_length = 18 %}
+{% if type == "desks" %}
+{% set rows_array = [22, 12, 7, 2] %}
+{% else %}
+{% set rows_array = [18, 12, 7, 2] %}
+{% endif %}
+{% set rows_index = 0 %}
+{% set columns = 7 %}
+{% for app_list in data %}
+{% set outer_loop = loop %}
+  <div class="table-block" style="display: inline-block;">
+    <table>
+      <thead>
+        <tr>
+        <!-- <td bgcolor="#000000">{{ app_list[0] }}</td> -->
+        {% if app_list[1]|length > rows_array[rows_index] %}
+        {% set table_width = (((app_list[1]|length)/(rows_array[rows_index])) + 0.5)|round|int %}
+        {% set table_length = (((app_list[1]|length)/table_width) + 0.5)|round|int %}
+        {% else %}
+        {% set table_width = 1 %}
+        {% set table_length = app_list[1]|length %}
+        {% endif %}
+          <th colspan="{{ table_width }}" {% if type == "monitor" %}style="border-width:2px;"{% endif %}>{{ app_list[0] }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {% for app in app_list[1] %}
+
+          {% set bgcolor = app['color'] %}
+
+          {% if (type != "suites") and (type != "monitor") %}
+          <td bgcolor="{{ bgcolor }}" id="{{ app['host'].split('.')[0] }}-{{ app['suite'] }}-{{ app['name'] }}">
+            <div style="float:left;">{{ app['suite'] }}-{{ app['name'] }}&ensp;</div>
+            <div style="float:right;">{{ app['host'].split('.')[0] }}</div>
+          </td>
+          {% else %}
+          <td bgcolor="{{ bgcolor }}" id="{{ app['host'].split('.')[0] }}-{{ app['suite'] }}-{{ app['name'] }}" {% if type == "monitor" %}style="border-width:2px;font-weight:bold;"{% endif %}>
+            <div style="float:left;">{{ app['name'] }}&ensp;</div>
+            <div style="float:right;">{{ app['host'].split('.')[0] }}</div>
+          </td>
+          {% endif %}
+
+          {% if loop.index % table_width == 0 %}
+        </tr>
+        <tr>
+          {% endif %}
+
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endfor %}
+</div>

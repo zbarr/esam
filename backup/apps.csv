@@ -1,0 +1,368 @@
+status,suite,datacenter,cron,name,host,desk
+up,helen,chicago_6,No cron,2,ch6pswtr056,crude
+down,settlement,tokyo_2,No cron,1,tk2pswtr012.concord.global,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""40"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""16""}}",treasuries_01,ch6psltr055.concord.global,treasuries
+up,order-router,chicago_7,No cron,12,e7ch7066,nat-gas
+up,controller,tokyo_1,No cron,1,tk1pswtr020.concord.global,house
+down,capture-service,tokyo_1,No cron,2,tk1pswtr020.concord.global,house
+up,controller,new_york_4,No cron,1,e7ny4013,house
+down,heartbeat-monitor,operations,No cron,1,e7ch7heartbeat.concord.global,house
+up,order-router,new_york_4,No cron,4,ny4pswtr039.concord.global,equities
+up,hydra,chicago_6,No cron,2,e7ch6023,metals
+down,linux_script,chicago_7,No cron,8,e7ch7ftp02.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",equities_04,ch6psltr081.concord.global,equities
+up,feeder,tokyo_1,No cron,2,tk1pswtr017.concord.global,house
+up,pricefeeder,chicago_5,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_iepa_01,ch5pslss021.concord.global,ssvcs
+up,sapphire,new_york_5,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""18""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",equities_21,ny5psltr021,equities
+down,tsdb,chicago_7,No cron,2,tsb.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",metals_01,ch6psltr060.concord.global,metals
+up,drop-ccs2-xcbf,new_york_4,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}}",1,e7ny4017.concord.global,house
+up,capture-service,new_york_4,No cron,4,e7ny4014,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""35"", ""month"": ""*"", ""dayweek"": ""0-4"", ""hour"": ""16""}}",stirs_01,ch6psltr097.concord.global,stirs
+up,hydra,new_york_4,No cron,2,e7ny4026,equities
+down,ccs2-webadmin,chicago_7,Cron disabled,ui,ch7pslwb057.concord.global,ssvcs
+down,linux_script,chicago_7,"{""ice_instruments"": {""daymonth"": ""*"", ""minute"": ""35"", ""month"": ""*"", ""dayweek"": ""0-5"", ""hour"": ""16""}}",30,e7ch7ftp02.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_06,ch6psltr100.concord.global,bgls
+down,ccs2-drop,tokyo_1,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""16"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""07""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""2-6"", ""hour"": ""05""}}",1,tk1psltr018.concord.global,house
+down,hydra,chicago_7,No cron,1,e7ch70111,support
+down,settlement,tokyo_1,No cron,1,tk1pswtr020.concord.global,house
+up,capture-service,chicago_7,No cron,1,e7ch7097,house
+down,hydra,new_york_4,No cron,2,e7ny4023,equities
+down,ccs2-downloader,tokyo_2,"{""start"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""08""}}",1,tk2psltr010.concord.global,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""40"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""16""}}",treasuries_06,ch6psltr099.concord.global,treasuries
+down,risk-service,chicago_7,No cron,1,e7ch7096,house
+down,windows_script,chicago_7,No cron,24,tsb.concord.global,house
+down,linux_script,chicago_7,"{""ice_chat_download"": {""daymonth"": ""*"", ""minute"": ""50"", ""month"": ""*"", ""dayweek"": ""*"", ""hour"": ""23""}}",12,e7ch7ftp02.concord.global,house
+up,feeder,tokyo_1,No cron,1,tk1pswtr017.concord.global,house
+up,capture-service,chicago_6,No cron,2,e7ch6030,house
+up,hydra,chicago_6,No cron,1,e7ch6023,metals
+down,linux_script,chicago_7,"{""git_pull_cme_sun"": {""daymonth"": ""*"", ""minute"": ""50"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15-23""}, ""git_pull_cme_fri"": {""daymonth"": ""*"", ""minute"": ""50"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""0-16""}, ""git_pull_cme_mon-thur"": {""daymonth"": ""*"", ""minute"": ""50"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""*""}}",10,e7ch7ftp02.concord.global,house
+up,helen,chicago_7,No cron,3,ch7pswtr129.concord.global,crude
+up,order-router,chicago_7,No cron,3,e7ch7086,nat-gas-options
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",vmm_15,ny4psltr041.concord.global,volatility
+up,drop,chicago_6,No cron,6,e7ch6030,house
+down,linux_script,chicago_7,"{""helen_settles"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""23""}}",15,e7ch7ftp02.concord.global,house
+up,drop,tokyo_2,No cron,1,tk2pswtr012.concord.global,house
+up,order-router,chicago_7,No cron,2,e7ch70108,crude
+up,feeder,chicago_7,No cron,7,ch7pswss137,house
+down,ccs2-downloader,new_york_4,Cron disabled,2,e7ny4017.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",tmm_01,ch6psltr083.concord.global,cpcv
+down,downloader,chicago_7,No cron,1,ch7pswss137,house
+up,sapphire,chicago_5,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_10,ch5psltr017.concord.global,bgls
+down,sapphire,new_york_4,Cron disabled,equities_18,ny4psltr049.concord.global,equities
+down,linux_script,chicago_7,"{""getEikonChat"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}}",47,e7ch7ftp02.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",bgls_gump_01,e7ch6066.concord.global,bgls
+down,linux_script,chicago_7,"{""onetick_secdef_copy_to_onetick_server"": {""daymonth"": ""*"", ""minute"": ""35"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",37,e7ch7ftp02.concord.global,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",bgls_07,ch6psltr075.concord.global,bgls
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",gas_05,ch6psltr050.concord.global,natgas
+down,linux_script,chicago_7,Cron disabled,46,e7ch7ftp02.concord.global,house
+up,drop,new_york_4,No cron,1,ny4pswtr039.concord.global,equities
+up,drop,new_york_4,No cron,1,e7ny4010,house
+up,order-router,chicago_7,No cron,8,e7ch7066,nat-gas
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""40"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""16""}}",hawk_2,ch6psltr078.concord.global,hawk
+up,hydra,new_york_4,No cron,1,e7ny4038,equities
+down,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}}",vmm_16,e7ny4025.concord.global,volatility
+up,feeder,chicago_6,No cron,2,ch6pswss085.concord.global,house
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_zbbf_01,ch0pslss010.concord.global,ssvcs
+down,downloader,chicago_5,Cron disabled,ideq_01,ch5pslss021.concord.global,No desk
+down,sapphire,new_york_4,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}}",vmm_01,ny4pslss046.concord.global,volatility
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""05""}}",gas_03,ch6psltr087.concord.global,natgas
+up,order-router,chicago_7,No cron,1,e7ch7086,nat-gas
+up,hydra,chicago_6,No cron,2,e7ch6045,metals
+up,hydra,chicago_7,No cron,1,e7ch70114,equities
+up,helen,chicago_6,No cron,1,ch6pswtr056,crude
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",vmm_14,ny4psltr040.concord.global,volatility
+down,linux_script,chicago_7,"{""cme_settles"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",3,e7ch7ftp02.concord.global,house
+down,hydra,new_york_4,No cron,3,e7ny4026,equities
+down,windows_script,chicago_7,No cron,1,tsb.concord.global,house
+up,sapphire,tokyo_1,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""59"", ""month"": ""*"", ""dayweek"": ""2-6"", ""hour"": ""05""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""07""}}",fireball_8,tk1psltr012.concord.global,cpcv
+up,feeder,chicago_7,No cron,8,ch7pswss137,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",equities_14,ch6psltr095.concord.global,equities
+up,order-router,chicago_7,No cron,1,e7ch70108,crude
+down,linux_script,chicago_7,"{""nymex_settles"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",4,e7ch7ftp02.concord.global,house
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",vmm_12,ny4psltr032.concord.global,volatility
+up,hydra,chicago_6,No cron,2,e7ch6058,equities
+down,linux_script,chicago_7,Cron disabled,35,e7ch7ftp02.concord.global,house
+up,position-bridge,chicago_7,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}}",1,ch7pslss132.concord.global,house
+down,ccs2_admin_proxy,chicago_7,No cron,default,ch7pslwb056.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",tmm_02,ch6psltr084.concord.global,cpcv
+up,pricefeeder,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_lime_01,e7ny4017.concord.global,ssvcs
+down,downloader,new_york_4,No cron,1,e7ny4013,house
+down,optionscity,chicago_6,No cron,metro,ch6psltr010.concord.global,nat-gas-options
+down,sapphire,new_york_4,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}}",click_vmm2,ny4pslss046.concord.global,volatility
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",mpf_all_01,ch0pslss010.concord.global,ssvcs
+down,tsdb,chicago_7,No cron,5,tsb.concord.global,house
+up,ccs2-service,chicago_7,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""13""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}}",1,ch7pslss132.concord.global,house
+up,controller,chicago_7,No cron,1,ch7pswss137,house
+down,ccs2-downloader,new_york_4,"{""start"": {""daymonth"": ""*"", ""minute"": ""16"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",1,e7ny4017.concord.global,house
+down,tsdb,chicago_7,No cron,6,tsb.concord.global,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_05,ch6psltr063.concord.global,bgls
+down,downloader,chicago_7,No cron,2,ch7pswss137,house
+up,capture-service,chicago_7,No cron,3,e7ch7097,house
+up,ccs2-webadmin,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",ui,ch7pslwb056.concord.global,ssvcs
+down,windows_script,chicago_7,No cron,18,tsb.concord.global,house
+up,hydra,chicago_6,No cron,1,e7ch6045,metals
+up,sapphire,chicago_5,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""18""}}",bgls_09,ch5psltr018.concord.global,bgls
+up,order-router,chicago_7,No cron,5,e7ch7086,nat-gas
+up,drop,chicago_6,No cron,3,e7ch6030,house
+down,windows_script,chicago_7,No cron,32,tsb.concord.global,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""40"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""16""}}",treasuries_02,ch6psltr070.concord.global,treasuries
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""06""}}",equities_06,ch6psltr076.concord.global,equities
+up,helen,chicago_7,No cron,1,ch7pswtr129.concord.global,crude
+down,linux_script,chicago_7,No cron,5,e7ch7ftp02.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_12,ch6psltr061.concord.global,bgls
+up,order-router,chicago_7,No cron,6,e7ch7066,nat-gas
+up,hydra,new_york_4,No cron,1,e7ny4023,equities
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_lime_01,ch0pslss010.concord.global,ssvcs
+down,downloader,tokyo_2,No cron,1,tk2pswtr012.concord.global,house
+up,feeder,chicago_7,No cron,2,e7ch7097,house
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_xtkt_01,ch0pslss010.concord.global,ssvcs
+up,feeder,chicago_7,No cron,4,ch7pswss137,house
+down,linux_script,chicago_7,"{""oc_abn_fix_logs"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""19""}}",38,e7ch7ftp02.concord.global,house
+up,order-router,chicago_7,No cron,10,e7ch7066,nat-gas
+down,sapphire,new_york_1,Cron disabled,equities_19,ny1psltr011.concord.global,equities
+down,tsdb,chicago_7,No cron,13,tsb.concord.global,house
+up,feeder,new_york_4,No cron,1,ny4pswtr039.concord.global,equities
+up,oc-console-broker,chicago_7,"{""stop_mon_fri"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_mon_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0-4"", ""hour"": ""17""}}",crude_01,ch7psltr141.concord.global,crude
+down,qa-prod-tracker,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",api,ch7pslwb056.concord.global,house
+up,natasha,new_york_4,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""stop_wd"": {""daymonth"": ""*"", ""minute"": ""16"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",1,e7ny4016.concord.global,equities
+down,downloader,chicago_7,Cron disabled,glbx_01,ch7pslss132.concord.global,No desk
+up,capture-service,chicago_6,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}}",1,e7ch609.concord.global,house
+up,drop,chicago_6,No cron,4,e7ch6030,house
+down,downloader,chicago_7,No cron,1,e7ch7088,house
+down,sapphire,chicago_1,Cron disabled,test_01,ch1qsltr025,bgls
+up,capture-service,new_york_4,No cron,5,e7ny4014,house
+up,pricefeeder,new_york_1,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_lime_02,ny1pslss010.concord.global,ssvcs
+down,linux_script,chicago_7,No cron,33,e7ch7ftp02.concord.global,house
+up,feeder,chicago_7,No cron,3,e7ch7097,house
+up,mkt-subscriptions,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",api,ch7pslwb056.concord.global,house
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""18""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",equities_03,ny4psltr033.concord.global,equities
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",vmm_17,ny4psltr031.concord.global,volatility
+up,hydra,chicago_6,No cron,1,e7ch6053,us-treasuries
+down,risk-service,chicago_6,No cron,1,e7ch6030,house
+up,hydra,tokyo_2,No cron,1,tk2pswtr011.concord.global,metals
+down,linux_script,chicago_7,"{""socgen_ice_audit_upload"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0-5"", ""hour"": ""20""}}",44,e7ch7ftp02.concord.global,house
+up,feeder,chicago_7,No cron,1,e7ch7097,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_lino_01,ch6psltr073.concord.global,bgls
+up,hydra,chicago_6,No cron,2,e7ch6054,crude
+up,sapphire,chicago_5,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""18""}}",gomm_01,ch5psltr024.concord.global,cpcv
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_xcbf_01,ch0pslss010.concord.global,ssvcs
+down,linux_script,chicago_7,"{""oc_socgen_fix_logs"": {""daymonth"": ""*"", ""minute"": ""55"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",43,e7ch7ftp02.concord.global,house
+up,feeder,tokyo_2,No cron,1,tk2pswtr012.concord.global,house
+up,order-router,chicago_7,No cron,2,e7ch70102,nat-gas
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_xose_01,ch0pslss010.concord.global,ssvcs
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""06""}}",equities_09,ch6psltr076.concord.global,equities
+down,tsdb,chicago_7,No cron,1,tsb.concord.global,house
+down,no_apps,chicago_7,No cron,1,netpop.concord.global,house
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_idfx_01,ch0pslss010.concord.global,ssvcs
+down,tsdb,chicago_7,No cron,9,tsb.concord.global,house
+down,windows_script,chicago_7,No cron,20,tsb.concord.global,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""05""}}",gas_02,ch6psltr086.concord.global,natgas
+down,linux_script,chicago_7,"{""oc_settles"": {""daymonth"": ""*"", ""minute"": ""00,17,30,45"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""14-23""}}",13,e7ch7ftp02.concord.global,house
+up,ccs2-webadmin,chicago_7,Cron disabled,api,ch7pslwb057.concord.global,ssvcs
+up,pricefeeder,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_xcbf_01,e7ny4017.concord.global,ssvcs
+up,feeder,chicago_6,No cron,1,ch6pswss085.concord.global,house
+up,capture-service,new_york_4,No cron,3,e7ny4014,house
+up,hydra,chicago_6,No cron,1,e7ch6054,crude
+up,hydra,chicago_7,No cron,1,e7ch7097,metals
+up,perf-stats,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",api,ch7pslwb056.concord.global,house
+up,drop,chicago_6,No cron,1,e7ch6030,house
+up,order-router,chicago_7,No cron,1,e7ch7097,metals
+down,order-router,chicago_7,No cron,8,e7ch7086,nat-gas
+up,order-router,chicago_7,No cron,11,e7ch7066,nat-gas
+down,ccs2-downloader,tokyo_1,"{""start"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""07""}}",1,tk1psltr018.concord.global,house
+down,linux_script,chicago_7,No cron,19,e7ch7ftp02.concord.global,house
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",vmm_18,e7ny4025.concord.global,volatility
+down,optionscity,chicago_6,No cron,metro,ch6pslt033.concord.global,nat-gas-options
+up,hydra,chicago_6,No cron,7,e7ch6043,cpcv
+down,windows_script,chicago_7,No cron,1,e7ch7088,house
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""18""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",equities_07,ny4psltr048.concord.global,equities
+up,hydra,chicago_5,No cron,2,ch5pswtr011.concord.global,nat-gas
+up,pricefeeder,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_glbx_03,ch6pslss012.concord.global,ssvcs
+up,hydra,chicago_6,No cron,1,e7ch6051,cbl
+down,ccs2-drop,new_york_4,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""18""}}",1,e7ny4017.concord.global,house
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",vmm_08,ny4psltr020.concord.global,volatility
+up,order-router,chicago_7,No cron,6,e7ch7086,nat-gas
+up,sapphire,new_york_4,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""20""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""50"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""03""}}",equities_10,ny4psltr035.concord.global,equities
+up,order-router,new_york_4,No cron,5,ny4pswtr039.concord.global,equities
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",equities_13,ch6psltr094.concord.global,equities
+down,win_app,chicago_7,No cron,1,e7ch7088,house
+up,pricefeeder,tokyo_1,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""1"", ""hour"": ""07""}}",basic_xose_01,tk1psltr018.concord.global,ssvcs
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""40"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""16""}}",treasuries_05,ch6psltr055.concord.global,treasuries
+up,capture-service,chicago_6,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}}",3,e7ch609.concord.global,house
+up,capture-service,tokyo_1,No cron,1,tk1pswtr020.concord.global,house
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_glbx_01,ch0pslss010.concord.global,ssvcs
+up,order-router,tokyo_2,No cron,1,tk2pswtr011.concord.global,metals
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""05""}}",gas_04,ch6psltr090.concord.global,natgas
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""40"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""16""}}",treasuries_04,ch6psltr089.concord.global,treasuries
+up,pricefeeder,chicago_5,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_ideq_01,ch5pslss021.concord.global,ssvcs
+up,feeder,chicago_6,No cron,6,e7ch6046,house
+up,helen,chicago_7,No cron,2,ch7pswtr129.concord.global,crude
+down,linux_script,chicago_7,No cron,28,e7ch7ftp02.concord.global,house
+up,feeder,chicago_6,No cron,3,e7ch6046,house
+up,feeder,chicago_7,No cron,1,ch7pswss137,house
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_iepa_01,ch0pslss010.concord.global,ssvcs
+down,downloader,chicago_7,No cron,2,e7ch7097,house
+up,sapphire,tokyo_1,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""59"", ""month"": ""*"", ""dayweek"": ""2-6"", ""hour"": ""05""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""07""}}",fireball_9,tk1psltr013.concord.global,cpcv
+up,natasha,new_york_4,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""stop_wd"": {""daymonth"": ""*"", ""minute"": ""16"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",1,e7ny4021.concord.global,equities
+up,helen,chicago_6,No cron,1,e7ch6059,natgas
+up,drop,chicago_7,No cron,1,e7ch7057,house
+up,drop-ccs2-corvil,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""40"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}}",1,e7ch70127.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_08,ch6psltr077.concord.global,bgls
+down,hydra,new_york_4,No cron,1,e7ny4026,equities
+up,feeder,chicago_6,No cron,2,e7ch6046,house
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""18""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",equities_01,ny4psltr042.concord.global,equities
+up,pricefeeder,tokyo_2,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""05""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""1"", ""hour"": ""07""}}",basic_xtkt_01,tk2psltr010.concord.global,ssvcs
+up,capture-service,chicago_6,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}}",2,e7ch609.concord.global,house
+up,order-router,chicago_7,No cron,2,e7ch7097,metals
+up,order-router,chicago_6,No cron,1,e7ch6043,cpcv
+down,windows_script,chicago_7,No cron,29,tsb.concord.global,house
+up,drop,chicago_6,No cron,2,e7ch6030,house
+up,ccs2-fills,chicago_5,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",tool,ch5pslss022.concord.global,house
+up,order-router,chicago_7,No cron,4,e7ch70108,crude
+up,pricefeeder,chicago_0,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",enriched_ideq_01,ch0pslss010.concord.global,ssvcs
+up,natasha,new_york_4,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""stop_wd"": {""daymonth"": ""*"", ""minute"": ""16"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",2,e7ny4021.concord.global,equities
+down,windows_script,chicago_7,No cron,25,tsb.concord.global,house
+down,downloader,new_york_4,No cron,1,e7ny4014,house
+down,windows_script,chicago_7,No cron,27,tsb.concord.global,house
+down,windows_script,chicago_7,No cron,28,tsb.concord.global,house
+up,hydra,chicago_6,No cron,5,e7ch6043,cpcv
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",vmm_13,ny4psltr037.concord.global,volatility
+up,order-router,chicago_7,No cron,2,e7ch7086,nat-gas
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_11,ch6psltr074.concord.global,bgls
+down,linux_script,chicago_7,"{""getPivotChat"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}}",48,e7ch7ftp02.concord.global,house
+down,solarcapture,chicago_5,No cron,ipea,ch5pslss010.concord.global,ssvcs
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""07""}}",equities_02,ch6pslt068.concord.global,equities
+down,ccs2-downloader,new_york_4,"{""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""start_mon-fri"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}}",3,e7ny4017.concord.global,house
+up,helen,chicago_6,No cron,3,ch6pswtr056,crude
+down,order-router,chicago_7,No cron,7,e7ch7086,nat-gas
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",es_stacker_01,ch6psltr082.concord.global,equities
+down,optionscity,chicago_6,No cron,cityparcel,ch6pslt033.concord.global,nat-gas-options
+up,sapphire,new_york_4,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""06""}}",equities_05,e7ny4019.concord.global,equities
+down,win_app,chicago_7,No cron,1,e7ch7ccs01,house
+up,controller,new_york_4,No cron,1,ny4pswtr039.concord.global,equities
+up,pricefeeder,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_glbx_05,ch6pslss012.concord.global,ssvcs
+down,linux_script,chicago_7,"{""socgen_cme_audit_upload"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0-5"", ""hour"": ""20""}}",31,e7ch7ftp02.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",equities_22,ch6psltr103.concord.global,equities
+up,capture-service,chicago_6,No cron,1,e7ch6030,house
+up,drop-ccs2-lime,new_york_4,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""20""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""18""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""55"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""03""}}",1,e7ny4017.concord.global,house
+up,order-router,new_york_4,No cron,2,ny4pswtr039.concord.global,equities
+down,risk-service,chicago_7,No cron,1,e7ch7057,house
+up,order-router,chicago_7,No cron,9,e7ch7066,nat-gas
+up,helen,chicago_7,No cron,2,e7ch70102,nat-uk-gas
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",bgls_gump_02,e7ch6066.concord.global,bgls
+up,feeder,chicago_6,No cron,5,e7ch6046,house
+up,natasha,new_york_4,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""stop_wd"": {""daymonth"": ""*"", ""minute"": ""16"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",2,e7ny4016.concord.global,equities
+down,risk-service,new_york_4,No cron,1,e7ny4010,house
+down,sapphire,chicago_5,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""01"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}}",brentmm_05,ch5psltr024.concord.global,cpcv
+down,linux_script,chicago_7,"{""newedge_risk_upload"": {""daymonth"": ""*"", ""minute"": ""35"", ""month"": ""*"", ""dayweek"": ""*"", ""hour"": ""15""}}",20,e7ch7ftp02.concord.global,house
+down,linux_script,chicago_7,No cron,18,e7ch7ftp02.concord.global,house
+down,feeder,tokyo_1,No cron,1,tk1pswtr020.concord.global,house
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",vmm_11,ny4psltr020.concord.global,volatility
+up,pricefeeder,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_glbx_04,ch6pslss012.concord.global,ssvcs
+up,hydra,chicago_7,No cron,2,e7ch70113,nat-uk-gas
+up,qa-prod-tracker,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",api,e7ch7web01.concord.global,house
+up,oc-risk,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",webtool,ch7psltr141.concord.global,house
+down,ccs2-downloader,chicago_7,"{""start_sun"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""14""}, ""start_week"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",1,ch7pslss132.concord.global,house
+up,hydra,chicago_7,No cron,3,e7ch70104,nat-gas
+up,pricefeeder,new_york_9,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_lime_03,ny9pslss010.concord.global,ssvcs
+up,drop,chicago_6,No cron,5,e7ch6030,house
+up,helen,chicago_7,No cron,1,e7ch70102,nat-uk-gas
+down,sapphire,new_york_9,Cron disabled,equities_20,ny9psltr011.concord.global,equities
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",equities_08,ch6psltr072.concord.global,equities
+down,linux_script,chicago_7,No cron,7,e7ch7ftp02.concord.global,house
+down,downloader,chicago_7,No cron,3,e7ch7097,house
+up,hydra,chicago_6,No cron,1,e7ch6058,equities
+down,windows_script,chicago_7,No cron,23,tsb.concord.global,house
+up,feeder,new_york_4,No cron,1,e7ny4013,house
+up,hydra,new_york_4,No cron,1,ny4pswtr043.concord.global,equities
+down,linux_script,chicago_7,"{""archive_cleanup"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}}",32,e7ch7ftp02.concord.global,house
+up,sapphire,tokyo_1,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""59"", ""month"": ""*"", ""dayweek"": ""2-6"", ""hour"": ""05""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""07""}}",fireball_6,tk1psltr011.concord.global,cpcv
+up,sapphire,chicago_5,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""01"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""18""}}",brentmm_04,ch5psltr023.concord.global,cpcv
+up,feeder,chicago_7,No cron,6,ch7pswss137,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""04"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""05""}}",equities_12,ch6pslt068.concord.global,equities
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""18""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",equities_11,ny4psltr034.concord.global,equities
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""58"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",clmm_02,ch6psltr080.concord.global,cpcv
+up,controller,new_york_4,No cron,1,e7ny4014,house
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}}",click_vmm,e7ny4025.concord.global,volatility
+down,tsdb,chicago_7,No cron,7,tsb.concord.global,house
+down,linux_script,chicago_7,No cron,1,e7ch7ftp02.concord.global,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""40"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""16""}}",treasuries_03,ch6psltr069.concord.global,treasuries
+up,ccs2-webadmin,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",api,ch7pslwb056.concord.global,ssvcs
+up,condor,new_york_4,No cron,equities_45,ny4psltr045.concord.global,equities
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_03,ch6psltr064.concord.global,bgls
+up,order-router,new_york_4,No cron,3,ny4pswtr039.concord.global,equities
+down,windows_script,chicago_7,No cron,31,tsb.concord.global,house
+up,controller,chicago_7,No cron,1,e7ch7088,house
+up,hydra,chicago_5,No cron,1,ch5pswtr015.concord.global,metals
+down,order-service,chicago_7,No cron,1,e7ch7060,house
+down,optionscity,chicago_7,No cron,metro,e7ch70128.concord.global,crude
+up,pricefeeder,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_glbx_02,ch6pslss012.concord.global,ssvcs
+up,hydra,chicago_5,No cron,1,ch5pswtr012.concord.global,nat-gas
+up,sapphire,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""18""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",equities_15,ny4psltr047.concord.global,equities
+down,linux_script,chicago_7,Cron disabled,45,e7ch7ftp02.concord.global,house
+down,downloader,tokyo_1,No cron,1,tk1pswtr020.concord.global,house
+up,feeder,new_york_4,No cron,1,e7ny4014,house
+down,linux_script,chicago_7,"{""cme_cbt_settles"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",2,e7ch7ftp02.concord.global,house
+down,alert-server,chicago_7,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""14""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}}",1,ch7pslss132.concord.global,house
+down,linux_script,chicago_7,No cron,9,e7ch7ftp02.concord.global,house
+up,feeder,chicago_7,No cron,3,ch7pswss137,house
+down,windows_script,chicago_7,No cron,30,tsb.concord.global,house
+down,sapphire,chicago_6,Cron disabled,hawk_3,ch6psltr067.concord.global,hawk
+down,cadmin,chicago_7,No cron,1,e7ch7ccs01,house
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""05""}}",gas_07,ch6psltr091.concord.global,natgas
+up,feeder,chicago_7,No cron,9,ch7pswss137,house
+up,order-router,tokyo_2,No cron,2,tk2pswtr011.concord.global,metals
+up,order-router,tokyo_2,No cron,3,tk2pswtr011.concord.global,metals
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",tmm_04,ch6psltr102.concord.global,cpcv
+up,order-router,chicago_7,No cron,3,e7ch70108,crude
+up,order-router,chicago_7,No cron,3,e7ch7097,metals
+down,windows_script,chicago_7,No cron,2,tsb.concord.global,house
+up,capture-service,new_york_4,No cron,1,ny4pswtr039.concord.global,equities
+down,linux_script,chicago_7,No cron,29,e7ch7ftp02.concord.global,house
+down,order-service,new_york_4,No cron,1,e7ny4010,house
+up,capture-service,new_york_4,No cron,2,ny4pswtr039.concord.global,equities
+up,sapphire,chicago_6,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",bgls_04,ch6psltr065.concord.global,bgls
+up,sapphire,tokyo_1,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""59"", ""month"": ""*"", ""dayweek"": ""2-6"", ""hour"": ""05""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""07""}}",fireball_7,tk1psltr015.concord.global,cpcv
+up,capture-service,new_york_4,No cron,2,e7ny4014,house
+up,hydra,chicago_5,No cron,1,ch5pswtr011.concord.global,nat-gas
+up,ccs2-fills,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""06""}}",tool,ch7pslwb056.concord.global,house
+up,drop,chicago_6,No cron,7,e7ch6030,house
+up,bpipe_bridge,new_york_4,No cron,1,e7ny4016.concord.global,house
+down,linux_script,chicago_7,"{""xcbf_settles"": {""daymonth"": ""*"", ""minute"": ""20"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""15""}}",6,e7ch7ftp02.concord.global,house
+up,order-router,chicago_7,No cron,7,e7ch7066,nat-gas
+up,heartbeat,chicago_7,"{""start"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""09""}, ""stop"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""6"", ""hour"": ""08""}}",service,ch7pslop060.concord.global,all
+down,sapphire,new_york_4,"{""stop_wd"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""17""}}",vmm_02,ny4pslss046.concord.global,volatility
+up,order-router,chicago_7,No cron,4,e7ch7086,nat-gas-options
+down,order-service,chicago_6,No cron,1,e7ch6030,house
+down,linux_script,chicago_7,"{""onetick_cme_secdef_download"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""16""}}",36,e7ch7ftp02.concord.global,house
+down,windows_script,chicago_7,No cron,22,tsb.concord.global,house
+down,tsdb,chicago_7,No cron,8,tsb.concord.global,house
+up,pricefeeder,chicago_5,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_idfx_01,ch5pslss021.concord.global,ssvcs
+up,pricefeeder,new_york_4,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""45"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_zbbf_01,e7ny4017.concord.global,ssvcs
+down,linux_script,new_york_4,No cron,1,ny4psltr045.concord.global,house
+up,order-router,chicago_7,No cron,3,e7ch70102,nat-gas
+down,windows_script,chicago_7,No cron,33,tsb.concord.global,house
+down,ccs2-downloader,chicago_7,"{""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""18""}}",3,ch7pslss132.concord.global,house
+down,optionscity,chicago_7,No cron,metro,ch7psltr133.concord.global,crude
+down,ccs2-drop,chicago_7,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""14""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""05"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}}",1,ch7pslss132.concord.global,house
+down,windows_script,chicago_7,No cron,21,tsb.concord.global,house
+down,hydra,chicago_7,No cron,1,e7ch70104,nat-gas
+down,linux_script,chicago_7,"{""socgen_ice_audit_upload"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""0-5"", ""hour"": ""20""}}",34,e7ch7ftp02.concord.global,house
+down,linux_script,chicago_7,"{""cme_configs_weekday"": {""daymonth"": ""*"", ""minute"": ""51"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""*""}, ""cme_configs_sunday"": {""daymonth"": ""*"", ""minute"": ""35"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""14,15,20,22""}}",11,e7ch7ftp02.concord.global,house
+up,fxrecast,new_york_4,No cron,1,e7ny4016.concord.global,house
+up,hydra,chicago_7,No cron,1,e7ch70113,nat-uk-gas
+up,hydra,chicago_7,No cron,1,e7ch70130,hawk
+up,order-router,new_york_4,No cron,1,ny4pswtr039.concord.global,equities
+down,linux_script,chicago_7,No cron,16,e7ch7ftp02.concord.global,house
+up,sapphire,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""00"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""16""}}",tmm_05,ch6psltr102.concord.global,cpcv
+up,pricefeeder,chicago_6,"{""stop_fri"": {""daymonth"": ""*"", ""minute"": ""15"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""16""}, ""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}}",basic_glbx_01,ch6pslss012.concord.global,ssvcs
+up,order-router,new_york_4,No cron,6,ny4pswtr039.concord.global,equities
+up,controller,tokyo_2,No cron,1,tk2pswtr012.concord.global,house
+down,ccs2-downloader,chicago_7,"{""start_sun"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""15""}, ""start_wd"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""1-4"", ""hour"": ""18""}}",2,ch7pslss132.concord.global,house
+down,downloader,chicago_7,No cron,1,e7ch7097,house
+down,linux_script,chicago_7,"{""oc_clearport"": {""daymonth"": ""*"", ""minute"": ""11"", ""month"": ""*"", ""dayweek"": ""1-5"", ""hour"": ""14-23""}}",14,e7ch7ftp02.concord.global,house
+down,order-service,chicago_7,No cron,2,e7ch7060,house
+up,position-service,chicago_7,"{""start_sunday"": {""daymonth"": ""*"", ""minute"": ""06"", ""month"": ""*"", ""dayweek"": ""0"", ""hour"": ""14""}, ""stop_fri"": {""daymonth"": ""*"", ""minute"": ""10"", ""month"": ""*"", ""dayweek"": ""5"", ""hour"": ""17""}}",1,ch7pslss132.concord.global,house
+down,downloader,chicago_7,Cron disabled,idfx_01,ch7pslss132.concord.global,No desk
+down,linux_script,chicago_7,"{""abn_fix_logs"": {""daymonth"": ""*"", ""minute"": ""30"", ""month"": ""*"", ""dayweek"": ""0-5"", ""hour"": ""19""}}",26,e7ch7ftp02.concord.global,house

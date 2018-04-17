@@ -1,0 +1,45 @@
+<!doctype html>
+<div class=flex-container>
+{% set column_length = 18 %}
+{% for app_list in data %}
+
+{% set outer_loop = loop %}
+  <table border="1">
+    <thead>
+      <tr>
+        <td>{{ app_list[0] }}</td>
+      </tr>
+    </thead>
+    <tbody>
+    {% for app in app_list[1] %}
+    {% if app['status'] == "up" %}
+    {% set bgcolor = "#239B56" %}
+    {% else %}
+    {% set bgcolor = "#FFFFFF" %}
+    {% endif %}
+      <tr>
+        <td bgcolor="{[ bgcolor }}" id="{{ app['host'].split('.')[0] }}-{{ app['suite'] }}-{{ app['name'] }}">{{ app['name'] }} - {{ app['host'].split('.')[0] }}</td>
+      </tr>
+      {% if outer_loop.index > 6 %}
+      {% set column_length = 5 %}
+      {% elif outer_loop.index > 3 %}
+      {% set column_length = 10 %}
+      {% endif %}
+      {% if loop.index % column_length == 0 %}
+    </tbody>
+  </table>
+</td>
+<td nowrap>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>{{ app_list[0] }}</td>
+      </tr>
+    </thead>
+    <tbody>
+    {% endif %}
+    {% endfor %}
+    </tbody>
+  </table>
+{% endfor %}
+</div>

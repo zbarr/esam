@@ -2,7 +2,7 @@
   "name": "zeus",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2",
-    "pg": "^7.4.0",
     "pug": "^2.0.0-rc.4",
     "zeromq": "^4.6.0"
   }
