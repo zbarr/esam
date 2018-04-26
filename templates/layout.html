@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/fonts.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='custom.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
   </head>
   <body>
+    <!--div id="ctxmenu">
+      <ul class="menu-items">
+        <li>Start</li>
+      </ul>
+      <hr />
+      <ul class="menu-items">
+        <li>Stop</li>
+      </ul>
+    </div-->
     <div class="wrapper">
       <nav id="sidebar">
         <div class="sidebar-header">
@@ -61,6 +69,11 @@
               </li>
               <li id="monitor" {% if type == "monitor" %} class="active" {% endif %}>
                 <a href="javascript:void(0)" >Monitor</a>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a id="dot" href="javascript:void(0)">&#8226;</a>
               </li>
             </ul>
           </div>

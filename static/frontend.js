@@ -3,11 +3,87 @@
 console.log(window.location.host)
 host = 'http://' + window.location.host
 
+var warning = new Audio("static/warn.WAV")
+var critical = new Audio("static/crit.WAV")
+
+window.onpopstate = function(e){
+    if(e.state){
+      location.reload()
+    }
+};
+
+
 $(document).ready(function(){
+  /** Hamburger Button **/
+  document.getElementById("sidebarCollapse").onclick = function(event) {
+      $('#sidebar').toggleClass('active');
+      console.log("toggling")
+  }
+
+  /** e7 Button **/
+  document.getElementById("e7").onclick = function (event) {
+      resetActive()
+      document.getElementById("home").classList.add("active")
+      getHome()
+  }
+
+  /** Home Button **/
+  document.getElementById("home").onclick = function (event) {
+      resetActive()
+      document.getElementById("home").classList.add("active")
+      getHome()
+  }
+
+  /** Suites Button **/
+  document.getElementById("suites").onclick = function (event) {
+      resetActive()
+      document.getElementById("suites").classList.add("active")
+      getSuites()
+  }
+
+  /** Datacenters button **/
+  document.getElementById("datacenters").onclick = function (event) {
+      resetActive()
+      document.getElementById("datacenters").classList.add("active")
+      getDatacenters()
+  }
+
+  /** Desks button **/
+  document.getElementById("desks").onclick = function (event) {
+      resetActive()
+      document.getElementById("desks").classList.add("active")
+      getDesks()
+  }
+
+  /** Monitor button **/
+  document.getElementById("monitor").onclick = function (event) {
+    resetActive()
+    document.getElementById("monitor").classList.add("active")
+    getMonitor()
+  }
+
+  var sidebar_desks = document.getElementsByClassName("sidebar-desk")
+  for (var i = 0; i < sidebar_desks.length; i++) {
+    sidebar_desks[i].onclick = function() {
+      resetActive()
+      document.getElementById(this.id).classList.add("active")
+      var desk = this.id.split("-").slice(1,).join("-")
+      getDesks(desk)
+    }
+  }
 
   var socket = io.connect('http://' + document.domain + ':' + location.port);
   socket.on('connect', function() {
+    document.getElementById("dot").style.color = "#239B56"
     console.log("connected!")
+    $.get(window.location.href + "?view=true", function(data) {
+      document.getElementById('page').innerHTML = data
+    })
+    console.log("Data refreshed.")
+  });
+
+  socket.on('disconnect', function() {
+    document.getElementById("dot").style.color = "#f44141"
   });
 
   socket.on('test', function(msg) {
@@ -19,8 +95,15 @@ $(document).ready(function(){
       document.getElementById(msg.data.app_name).style.backgroundColor = msg.data.color
     }
     else {
+      if (msg.data.alert == "critical") {
+        critical.play()
+      }
+      else {
+        warning.play()
+      }
       old_color = document.getElementById(msg.data.app_name).style.backgroundColor
       document.getElementById(msg.data.app_name).style.backgroundColor = msg.data.color
+      document.getElementById(msg.data.app_name).style.color = "black"
       setTimeout(function() {flash(msg.data.app_name, old_color);}, 500)
     }
   });
@@ -39,80 +122,35 @@ $(document).ready(function(){
     })
     console.log("Data refreshed.")
   })
-});
 
-
-var sidebar_desks = document.getElementsByClassName("sidebar-desk")
-for (var i = 0; i < sidebar_desks.length; i++) {
-  sidebar_desks[i].onclick = function() {
-    resetActive()
-    document.getElementById(this.id).classList.add("active")
-    var desk = this.id.split("-").slice(1,).join("-")
-    getDesks(desk)
+  /**
+  document.getElementById("page").oncontextmenu = function(e) {
+    e.preventDefault()
+    $("#ctxmenu").css("left", e.pageX);
+    $("#ctxmenu").css("top", e.pageY);
+    $("#ctxmenu").css("display", "block");
+    $("#ctxmenu").fadeIn(200,startFocusOut());
   }
-}
+  **/
 
-window.onpopstate = function(e){
-    if(e.state){
-      location.reload()
+  document.onkeyup = function(e) {
+    if (e.ctrlKey && e.shiftKey && e.which == 83) {
+      $('#sidebar').toggleClass('active');
     }
-};
+  }
 
-/** Hamburger button **/
-document.getElementById("sidebarCollapse").onclick = function(event) {
-    $('#sidebar').toggleClass('active');
-    console.log("toggling")
-}
-
-/** e7 Button **/
-document.getElementById("e7").onclick = function (event) {
-    resetActive()
-    document.getElementById("home").classList.add("active")
-    getHome()
-}
-
-
-/** Home Button **/
-document.getElementById("home").onclick = function (event) {
-    resetActive()
-    document.getElementById("home").classList.add("active")
-    getHome()
-}
-
-/** Suites Button **/
-document.getElementById("suites").onclick = function (event) {
-    resetActive()
-    document.getElementById("suites").classList.add("active")
-    getSuites()
-}
-
-
-/** Datacenters button **/
-document.getElementById("datacenters").onclick = function (event) {
-    resetActive()
-    document.getElementById("datacenters").classList.add("active")
-    getDatacenters()
-}
-
-/** Desks button **/
-document.getElementById("desks").onclick = function (event) {
-    resetActive()
-    document.getElementById("desks").classList.add("active")
-    getDesks()
-}
-
-/** Monitor button **/
-document.getElementById("monitor").onclick = function (event) {
-  resetActive()
-  document.getElementById("monitor").classList.add("active")
-  getMonitor()
-}
+});
 
 /*******************************
 Click Handlers for sidebar
 *******************************/
 
-
+function startFocusOut(){
+  $(document).on("click",function(){
+  $("#ctxmenu").hide();
+  $(document).off("click");
+  });
+}
 
 
 function resetActive() {
@@ -175,4 +213,5 @@ function changeUrl(title, url) {
 
 function flash(app, color) {
   document.getElementById(app).style.backgroundColor = color
+  document.getElementById(app).style.color = "white"
 }

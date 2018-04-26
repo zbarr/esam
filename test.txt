@@ -1,5 +1,0 @@
-{% if loop.index % 7 == 0 %}
-</tr>
-<tr>
-
-<!-- td>{{ app['host'].split('.')[0] }}-{{ app['name'] }}</td> -->

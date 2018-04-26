@@ -2,9 +2,11 @@
 <div class="container-fluid">
 {% set column_length = 18 %}
 {% if type == "desks" %}
-{% set rows_array = [22, 12, 7, 2] %}
-{% elif (type == "home") or (type == "monitor") %}
-{% set rows_array = [20, 21, 21] %}
+{% set rows_array = [23, 12, 7, 2] %}
+{% elif (type == "home") %}
+{% set rows_array = [20, 20, 20] %}
+{% elif (type == "monitor") %}
+{% set rows_array = [20, 20, 20] %}
 {% else %}
 {% set rows_array = [18, 12, 7, 2] %}
 {% endif %}
@@ -12,7 +14,7 @@
 {% set columns = 7 %}
 {% for app_list in data %}
 {% set outer_loop = loop %}
-  <div class="table-block" >
+  <div class="table-block">
     <table>
       <thead>
         <tr>
@@ -24,14 +26,14 @@
         {% set table_width = 1 %}
         {% set table_length = app_list[1]|length %}
         {% endif %}
-          <th colspan="{{ table_width }}" {% if type == "monitor" %}style="border-width:2px;"{% endif %}>{{ app_list[0] }}</th>
+          <th colspan="{{ table_width }}" {% if type == "monitor" %}style="border-width:2px;font-size:17px;"{% endif %}>{{ app_list[0] }}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           {% for app in app_list[1] %}
           {% set bgcolor = app['color'] %}
-          <td bgcolor="{{ bgcolor }}" id="{{ app['host'].split('.')[0] }}-{{ app['suite'] }}-{{ app['name'] }}" {% if type == "monitor" %}style="border-width:2px;font-weight:bolder;"{% endif %}>
+          <td bgcolor="{{ bgcolor }}" id="{{ app['host'].split('.')[0] }}-{{ app['suite'] }}-{{ app['name'] }}" {% if type == "monitor" %}style="border-width:2px;font-size:15px;padding-right:4px;padding-left:4px;"{% endif %}>
             <div style="float:left;">{{ app['display_name'] }}&ensp;</div>
             <div style="float:right;">{{ app['host'].split('.')[0] }}</div>
           </td>
@@ -42,7 +44,7 @@
           {% endfor %}
           {% if (app_list[1]|length % table_width) != 0 %}
             {% for x in range(table_width - (app_list[1]|length % table_width)) %}
-            <td bgcolor="#239B56" {% if type == "monitor" %}style="border-width:2px;"{% endif %}></td>
+            <td bgcolor="#00441c" {% if type == "monitor" %}style="border-width:2px;"{% endif %}></td>
             {% endfor %}
           {% endif %}
         </tr>

@@ -29,75 +29,35 @@ class ApplicationDict:
         self.set_simple_desk_list()
         self.set_home_list()
 
-    def get_desks(self):
-        return self.desks
-
-    def get_desk_list(self):
-        return self.desk_list
-
-    def get_suite_list(self):
-        return self.suite_list
-
-    def get_datacenter_list(self):
-        return self.datacenter_list
-
-    def get_home_list(self):
-        return self.home_list
-
-    def get_simple_desk_list(self):
-        return self.simple_desk_list
-
     def get_app(self, key):
         return self.applications[key]
 
     def get_apps(self):
         return self.applications
 
-    def get_cron(self, key):
-        return self.applications[key].get("cron")
-
-    def add_app(self, key, app_dict):
-        self.applications[key] = app_dict
-
-    def update_status(self, key, type, new_status):
-        self.applications[key][type] = new_status
+    def add_app(self, key, app):
+        self.applications[key] = app
+        self.applications[key].change_color()
         self.init_templates()
-        return self.change_color(key)
 
-    def change_color(self, key):
-        if (self.applications[key]['suite'] in ["pricefeeder", "sapphire"]) and (self.applications[key]['hb_status'] == "up" and self.applications[key]['lr_status'] == "down"):
-            color = "#f4ee42"
-        elif (self.applications[key]['suite'] in ["pricefeeder", "sapphire"]) and (self.applications[key]['hb_status'] == "down" and self.applications[key]['lr_status'] == "up"):
-            color = "#f44141"
-        elif self.applications[key]['hb_status'] == "up" and self.applications[key]['cron_status'] == "up":
-            color = "#239B56"
-        elif self.applications[key]['hb_status'] == "up" and self.applications[key]['cron_status'] == "down":
-            color = "#4286f4"
-        elif self.applications[key]['hb_status'] == "down" and self.applications[key]['cron_status'] == "up":
-            color= "#f44141"
-        else:
-            color = "#aeaaaa"
-
-        self.applications[key]['color'] = color
+    def update_app_status(self, key, type, new_status):
+        color = self.applications[key].update_status(type, new_status)
+        self.init_templates()
         return color
 
+    def set_app_cron(self, key, type, dayweek, minute, hour):
+        self.applications[key].set_cron(type, dayweek, minute, hour)
 
-
-    def set_cron(self, key, type, dayweek, minute, hour):
-        self.applications[key]["cron"][type] = {"dayweek": dayweek, "minute": minute, "hour": hour}
-
-
-
-    def set_cron_list(self, key, cron_list):
-        self.applications[key]["cron_list"] = cron_list
-
-    def get_app_cron_list(self, key):
-        return self.applications[key].get("cron_list")
+    def remove_app(self, key):
+        return_value = self.applications.pop(key, None)
+        if return_value:
+            self.init_templates()
+        return return_value
 
     def set_unindexed_apps(self):
         self.unindexed_apps = []
-        for app, value in self.applications.items():
-            self.unindexed_apps.append(value)
+        for key, app in self.applications.items():
+            self.unindexed_apps.append(vars(app))
 
         return self.unindexed_apps
 
@@ -218,7 +178,7 @@ class ApplicationDict:
         otherlist = []
 
         for app in self.suites:
-            if len(self.suites[app]) > 10:
+            if len(self.suites[app]) > 9:
                 if self.home_list:
                     for index, suite in enumerate(self.home_list):
                         if len(self.suites[app]) > len(suite[1]):
@@ -252,8 +212,6 @@ class ApplicationDict:
         """
         return self.home_list
 
-
-
     def set_simple_desk_list(self):
         self.simple_desk_list = []
         for line in self.desk_list:
@@ -261,6 +219,52 @@ class ApplicationDict:
 
         return self.simple_desk_list
 
+
+class Application:
+    def __init__(self, host, suite, name, desk="ssvcs", datacenter="default", hb_status="down"):
+        self.host = host
+        self.suite = suite
+        self.name = name
+        self.desk = desk
+        self.datacenter = datacenter
+        self.hb_status = hb_status
+        self.cron_status = "down"
+        self.lr_status = "down"
+        self.cron = {}
+        self.cron_list = {}
+        self.color = "#3b3b3b"
+
+    def change_color(self):
+        if (self.suite in ["pricefeeder", "sapphire"]) and (self.hb_status == "up" and self.lr_status == "down"):
+            self.color = "#f4ee42"
+        elif (self.suite in ["pricefeeder", "sapphire"]) and (self.hb_status == "down" and self.lr_status == "up"):
+            self.color = "#720000"
+        elif self.hb_status == "up" and self.cron_status == "up":
+            self.color = "#00441c"
+        elif self.hb_status == "up" and self.cron_status == "down":
+            self.color = "#012766"
+        elif self.hb_status == "down" and self.cron_status == "up":
+            self.color = "#720000"
+        else:
+            self.color = "#3b3b3b"
+
+        return self.color
+
+    def update_status(self, type, new_status):
+        if type == "lr_status":
+            self.lr_status = new_status
+        elif type == "cron_status":
+            self.cron_status = new_status
+        elif type == "hb_status":
+            self.hb_status = new_status
+        else:
+            return None
+
+        color = self.change_color()
+        return color
+
+    def set_cron(self, type, dayweek, minute, hour):
+        self.cron[type] = {"dayweek": dayweek, "minute": minute, "hour": hour}
 
 
 class CronDict:

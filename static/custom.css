@@ -2,6 +2,41 @@
 All CSS for Sidebar
 ------------------------------ */
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* background: #888; */
+    visibility: hidden;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #282828;
+    /* visibility: hidden; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    /* visibility: visible; */
+}
+
+body {
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
 #sidebar {
     min-width: 200px;
     max-width: 200px;
@@ -132,32 +167,56 @@ All CSS for Navbar
 
 #navlinks a:hover {
     /** color: #a2232f; **/
-    color: #ffffff
+    color: #ffffff;
 }
 
 #content {
   width: 100%;
   background: #3b3b3b;
+  /* height: 100%; */
+  /* height: 100%; */
 
 }
 
-
+#dot {
+  /* height: 25px; */
+  font-size: 40px;
+  color: #f44141;
+}
 
 /* ------------------------------
 All CSS for page
 ------------------------------ */
 
+#ctxmenu{
+  display:none;
+  position: absolute;
+  /* border:1px solid #B2B2B2; */
+  width:150px;
+  background:#F9F9F9;
+  /* box-shadow: 3px 3px 2px #E9E9E9; */
+  /* border-radius:4px; */
+}
+
+
 #page {
     padding-left: 7px;
     padding-right: 7px;
     padding-top: 7px;
+    /* height: 100%; */
+    /* height: 100%; */
+
 
     /** background-color: black; **/
 }
 
 #page .container-fluid {
   text-align: justify;
-  text-align-last: justify;
+  text-align-last: justify; */
+  padding: 0px;
+  width: 100%;
+  height: 93vh;
+  overflow-y: auto;
 }
 
 #page table{
@@ -166,34 +225,41 @@ All CSS for page
 
 }
 
+#page td {
+  text-align: center;
+}
+
 #page th {
   color: white;
   background-color: black;
-  border: 1px solid white;
-  font-size: 11pt;
+  border: 1px solid black;
+  font-size: 12pt;
 }
 
 #page td {
-  border: 1px solid white;
+  border: 1px solid black;
+  /* font-family: "Gill Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif; */
+  /* font-family: "Arial Rounded MT Bold", Helvetica, Arial, sans-serif; */
+  font-family: "Myriad", Helvetica, Arial, sans-serif;
   /** font-family: 'Circular Std Bold'; **/
-  /** font-weight: bold; **/
   font-size: 10pt;
   padding-top: 0px;
-  padding-right: 1px;
-  padding-left: 1px;
+  padding-right: 3px;
+  padding-left: 3px;
   padding-bottom: 0px;
-  color: black;
-  /** background-color: #aeaaaa; **/
+  color: white;
+}
+
+#page td:hover {
+  filter: brightness(150%);
 }
 
 .table-block {
   margin: 8px;
-  /* box-shadow: -4px -4px 1px 1px; */
   display: inline-block;
-  box-shadow: 0 0 1px 4px;
+  box-shadow: 0 0 1px 3px;
 }
 
 .table-block:hover {
-  /* box-shadow: -6px -6px 3px 3px; */
-  box-shadow: 0 0 2px 7px;
+  box-shadow: 0 0 3px 5px #282828;
 }
